@@ -1,0 +1,108 @@
+import Link from "next/link";
+import { useState } from "react";
+import { TiTickOutline } from "react-icons/ti";
+
+const AboutSection = () => {
+  const [readMore1, setReadMore1] = useState(false);
+
+  return (
+    <div
+      id="about"
+      className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-14 mt-16 md:mt-32"
+    >
+      <div className="relative">
+        <div className="md:h-[26rem] md:w-[22rem] lg:h-[32rem] lg:w-[28rem] bg-ffsgLightPink rounded-lg" />
+        <img
+          className="md:h-[26rem] md:w-[22rem] lg:h-[32rem] lg:w-[28rem] rounded-lg md:absolute top-8 left-8 object-cover"
+          src="/aboutusimage.png"
+        />
+      </div>
+      <div>
+        <div className="space-y-5">
+          <p className="uppercase text-gray-500 font-medium text-lg">
+            About Us
+          </p>
+          <h2 className="font-semibold text-3xl md:text-5xl max-w-lg md:leading-normal leading-snug">
+            Our Story
+          </h2>
+          <div>
+            <p
+              className={
+                readMore1
+                  ? "line-clamp-none font-light text-gray-500"
+                  : "line-clamp-3 font-light text-gray-500"
+              }
+            >
+              FUN FACTORY SENSORY GYM, LLC is the leading manufacturer of custom
+              sensory gyms and equipment. Our dynamic and experienced team of
+              professionals design, develop and install our products throughout
+              North America.
+              <br />
+              <br />
+              We at FFSG create a state-of-the-art multi-sensory environment,
+              providing every child with positive play in a therapeutic
+              environment.
+              <br />
+              <br />
+              Throughout the building process, our clients can be assured to
+              experience the maximum level of professionalism, skills, and
+              service from our team. FFSG systems fit nicely into all kinds of
+              spaces with no shortage of options to keep children engaged. Our
+              products are carefully designed based on client specifications,
+              size, and budget.
+              <br />
+              <br />
+              We create our products to educate, challenge, and stimulate, but
+              most importantly, to bring the outdoor playing experience into a
+              more private setting.
+              <br />
+              <br />
+              At FFSG, your time and business are of utmost value to us. Our
+              customer service and design teams are available for inquiries and
+              consultations year-round. Our installations are rendered assuring
+              no shutdown time. Contact us for a unique experience, tailored to
+              your needs!
+            </p>
+            <span
+              className="text-ffsgPink underline hover:text-ffsgPurple cursor-pointer"
+              onClick={() => setReadMore1(!readMore1)}
+            >
+              {!readMore1 ? "Read more..." : "Read less..."}
+            </span>
+          </div>
+
+          <Link href="/contact">
+            <a className="text-white px-6 py-3 md:px-8 md:py-4 bg-ffsgPink rounded-lg inline-block cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold text-sm md:text-base">
+              <p>Contact us</p>
+            </a>
+          </Link>
+        </div>
+
+        <div className="hidden md:inline-block p-6 rounded-lg bg-ffsgLightPink mt-14">
+          <div className="flex space-x-12">
+            <div className="flex items-center space-x-4">
+              <div className="text-white p-3 bg-ffsgPink inline-block rounded-full">
+                <TiTickOutline size="2em" />
+              </div>
+              <div>
+                <p className="font-bold text-xl">48000+</p>
+                <p>World Wide Gym Installment</p>
+              </div>
+            </div>
+            {/* <div className="flex items-center space-x-4">
+              <div className="text-white p-3 bg-ffsgPink inline-block rounded-full">
+                <BiHomeAlt size="2em" />
+              </div>
+              <div>
+                <p className="font-bold">100+</p>
+                <p>Home Systems</p>
+              </div>
+            </div> */}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AboutSection;
