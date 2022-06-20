@@ -56,23 +56,23 @@ const TestimonialNbc = () => {
             The Only
           </p>
           <p className="font-semibold text-2xl md:text-3xl lg:text-4xl">
-            "Trusted Professionals"
+            &quot;Trusted Professionals&quot;
           </p>
         </div>
       </div>
       <div className="text-center md:text-left">
         <div className="space-y-3 md:space-y-5 text-center md:text-left">
           <p className="uppercase text-gray-500 font-medium text-base md:text-lg">
-            As seen on NBC show "George to the rescue"
+            As seen on NBC show &quot;George to the rescue&quot;
           </p>
           <h2 className="font-semibold text-3xl md:text-5xl max-w-lg md:leading-normal leading-snug">
             Recommended By Everyone
           </h2>
           <p className="font-light text-gray-500">
-            "Fun Factory made this episode the best of our 12 years, Barr none
-            the absolute best. It is clear to all in this industry that you are
-            who you are by what and how you do it, we call you the
-            untouchables."{" "}
+            &quot;Fun Factory made this episode the best of our 12 years, Barr
+            none the absolute best. It is clear to all in this industry that you
+            are who you are by what and how you do it, we call you the
+            untouchables.&quot;{" "}
             <span className="block font-medium mt-2">
               - Andrew Scerbo Executive Producer NBCUniversal / LXTV
             </span>

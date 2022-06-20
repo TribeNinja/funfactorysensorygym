@@ -219,7 +219,7 @@ const Contact = () => {
             </div>
 
             <p className="pt-10 md:pt-0 col-span-2 text-xl font-semibold uppercase text-center">
-              Service You're Interested In
+              Service You&apos;re Interested In
             </p>
 
             <div
