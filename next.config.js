@@ -8,7 +8,16 @@ const STUDIO_REWRITE = {
 
 module.exports = {
   reactStrictMode: true,
+
   rewrites: () => [STUDIO_REWRITE],
+  async rewrites() {
+    return [
+      {
+        source: "/",
+        destination: "https://www.facebook.com/:path*",
+      },
+    ];
+  },
   images: {
     domains: ["cdn.sanity.io"],
   },

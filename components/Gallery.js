@@ -88,7 +88,7 @@ const Gallery = ({ systems, type, short, title, description }) => {
                         {system.gallery.map((image) => (
                           <Image
                             key={system.title}
-                            height={isMobileOnly ? "250" : "290"}
+                            height={isMobileOnly ? "245" : "290"}
                             width={isMobileOnly ? "400" : "500"}
                             objectFit="cover"
                             src={urlFor(image).url()}

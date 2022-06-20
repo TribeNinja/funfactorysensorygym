@@ -11,10 +11,7 @@ function MyApp({ Component, pageProps }) {
 
       <Component {...pageProps} />
 
-      <MessengerCustomerChat
-        pageId={process.env.MESSENGER_PAGE_ID}
-        appId={process.env.MESSENGER_APP_ID}
-      />
+      <MessengerCustomerChat pageId="111131050739842" appId="735141727539744" />
     </>
   );
 }
