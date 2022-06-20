@@ -9,7 +9,6 @@ import Footer from "components/Footer";
 import Header from "components/Header";
 import { sanityClient } from "sanity";
 import TestimonialNbc from "components/TestimonialNbc";
-import MessengerCustomerChat from "react-messenger-customer-chat";
 
 const Index = ({ commercials, homes }) => {
   return (
@@ -49,7 +48,6 @@ const Index = ({ commercials, homes }) => {
         <Cta />
       </div>
       <Footer />
-      <MessengerCustomerChat pageId="111131050739842" appId="735141727539744" />
     </div>
   );
 };
