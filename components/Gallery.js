@@ -88,8 +88,8 @@ const Gallery = ({ systems, type, short, title, description }) => {
                         {system.gallery.map((image) => (
                           <Image
                             key={system.title}
-                            height="245"
-                            width="400"
+                            height={isMobileOnly ? "245" : "290"}
+                            width={isMobileOnly ? "400" : "500"}
                             objectFit="cover"
                             src={urlFor(image).url()}
                             alt={image.alt ? image.alt : "Sensory gym"}
