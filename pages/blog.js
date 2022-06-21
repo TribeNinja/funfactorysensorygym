@@ -6,6 +6,7 @@ import { sanityClient, urlFor } from "sanity";
 import Slider from "react-slick";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
+import Image from "next/image";
 
 function blog({ blogs }) {
   const settings = {
@@ -61,9 +62,12 @@ function blog({ blogs }) {
                       <a>
                         <Slider {...settings}>
                           {blog.gallery.map((image) => (
-                            <img
+                            <Image
+                              height="270"
+                              width="400"
+                              objectFit="cover"
                               key={blog._id}
-                              className="h-60 w-full object-cover hover:scale-125 transition-all duration-200"
+                              className="hover:scale-125 transition-all duration-200"
                               src={urlFor(image).url()}
                               alt={image.alt ? image.alt : "Sensory gym"}
                             />

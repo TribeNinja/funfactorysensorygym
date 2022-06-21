@@ -1,5 +1,8 @@
 import Link from "next/link";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 import { useState } from "react";
+import { FaChild } from "react-icons/fa";
 import { TiTickOutline } from "react-icons/ti";
 
 const AboutSection = () => {
@@ -78,26 +81,48 @@ const AboutSection = () => {
           </Link>
         </div>
 
-        <div className="hidden md:inline-block p-6 rounded-lg bg-ffsgLightPink mt-14">
-          <div className="flex space-x-12">
+        <div className="hidden w-full md:inline-block py-6 px-8 rounded-lg bg-ffsgLightPink mt-14">
+          <div className="flex items-center w-full justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="text-white p-3 bg-ffsgPink inline-block rounded-full">
+                <FaChild size="2em" />
+              </div>
+              <div>
+                <div className="font-bold text-2xl">
+                  <VisibilitySensor partialVisibility>
+                    {({ isVisible }) => (
+                      <p>
+                        {isVisible ? (
+                          <CountUp start={1} end={550000} duration={3} />
+                        ) : null}
+                        +
+                      </p>
+                    )}
+                  </VisibilitySensor>
+                </div>
+                <p>Children</p>
+              </div>
+            </div>
             <div className="flex items-center space-x-4">
               <div className="text-white p-3 bg-ffsgPink inline-block rounded-full">
                 <TiTickOutline size="2em" />
               </div>
               <div>
-                <p className="font-bold text-xl">48000+</p>
-                <p>World Wide Gym Installment</p>
+                <div className="font-bold text-2xl">
+                  <VisibilitySensor partialVisibility>
+                    {({ isVisible }) => (
+                      <p>
+                        {isVisible ? (
+                          <CountUp start={1} end={4400} duration={3} />
+                        ) : null}
+                        +
+                      </p>
+                    )}
+                  </VisibilitySensor>
+                </div>
+                <p>Installation Completed</p>
               </div>
             </div>
-            {/* <div className="flex items-center space-x-4">
-              <div className="text-white p-3 bg-ffsgPink inline-block rounded-full">
-                <BiHomeAlt size="2em" />
-              </div>
-              <div>
-                <p className="font-bold">100+</p>
-                <p>Home Systems</p>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

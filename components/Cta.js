@@ -12,7 +12,7 @@ const Cta = () => {
         style={{ backgroundImage: 'url("/cta%20bg.jpg")' }}
       >
         <h2 className="font-semibold text-3xl md:text-5xl md:max-w-xl md:leading-normal leading-snug text-white">
-          Subscribe to out newsletter!
+          Subscribe to our newsletter!
         </h2>
         {/* <p className="font-light text-sm md:text-base max-w-xl text-white">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin

@@ -13,8 +13,9 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: "/",
-        destination: "https://www.facebook.com/:path*",
+        source: "/:path*",
+        destination:
+          "https://www.facebook.com/plugins/customer_chat/SDK/:path*",
       },
     ];
   },

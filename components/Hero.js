@@ -1,5 +1,7 @@
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { FiArrowUpRight } from "react-icons/fi";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 import Slider from "react-slick";
 import Link from "next/link";
 import { TiTickOutline } from "react-icons/ti";
@@ -111,13 +113,40 @@ const Hero = () => {
           </Slider>
 
           <div className="md:hidden absolute bottom-5 left-0 right-0 mx-5 mt-14">
-            <div className="flex items-center space-x-4 px-6 py-4 bg-white">
-              <div className="text-white p-3 bg-ffsgPink inline-block rounded-full text-3xl">
-                <TiTickOutline />
+            <div className="flex items-center justify-between px-6 py-4 bg-white">
+              <div className="flex items-center space-x-4">
+                <div>
+                  <div className="font-bold text-2xl">
+                    <VisibilitySensor partialVisibility>
+                      {({ isVisible }) => (
+                        <p>
+                          {isVisible ? (
+                            <CountUp start={1} end={550000} duration={3} />
+                          ) : null}
+                          +
+                        </p>
+                      )}
+                    </VisibilitySensor>
+                  </div>
+                  <p className="text-sm">Children</p>
+                </div>
               </div>
-              <div>
-                <p className="font-bold text-2xl">48000+</p>
-                <p className="text-sm">World Wide Gym Installment</p>
+              <div className="flex items-center space-x-4">
+                <div>
+                  <div className="font-bold text-2xl">
+                    <VisibilitySensor partialVisibility>
+                      {({ isVisible }) => (
+                        <p>
+                          {isVisible ? (
+                            <CountUp start={1} end={4400} duration={3} />
+                          ) : null}
+                          +
+                        </p>
+                      )}
+                    </VisibilitySensor>
+                  </div>
+                  <p className="text-sm">Installation Completed</p>
+                </div>
               </div>
             </div>
           </div>
