@@ -84,6 +84,7 @@ const Hero = () => {
             <video
               className="h-[35rem] md:h-[96vh] w-full object-cover"
               autoPlay
+              playsInline
               loop
               muted
             >
@@ -92,6 +93,7 @@ const Hero = () => {
             <video
               className="h-[35rem] md:h-[96vh] w-full object-cover"
               autoPlay
+              playsInline
               loop
               muted
             >
@@ -100,6 +102,7 @@ const Hero = () => {
             <video
               className="h-[35rem] md:h-[96vh] w-full object-cover"
               autoPlay
+              playsInline
               loop
               muted
             >

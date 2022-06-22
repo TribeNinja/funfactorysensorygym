@@ -268,18 +268,18 @@ const SystemsPage = ({ system }) => {
         </article>
         <div className="space-y-3 text-ffsgPink mt-10">
           <p>Share this</p>
-          <div className="flex space-x-4 md:space-x-6 text-xl md:text-3xl">
+          <div className="flex space-x-4 md:space-x-6 text-2xl md:text-3xl">
             <FacebookShareButton url={URL}>
-              <TiSocialFacebook />
+              <TiSocialFacebook className="hover:text-ffsgPurple" />
             </FacebookShareButton>
             <TwitterShareButton url={URL}>
-              <TiSocialTwitter />
+              <TiSocialTwitter className="hover:text-ffsgPurple" />
             </TwitterShareButton>
           </div>
         </div>
         {system._type !== "blog" && (
           <div>
-            <hr className="mt-8" />
+            <hr className="mt-14 md:mt-20" />
             <div className="mt-10">
               <div className="pb-10 bg-white space-y-3">
                 <p className="text-ffsgPink">Projects</p>
