@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { RiDoubleQuotesL, RiImage2Fill } from "react-icons/ri";
 
-const TestimonialCard = ({ text, from, title }) => {
+const TestimonialCard = ({ text, from, title, img }) => {
   const [readMore, setReadMore] = useState(false);
 
   return (
@@ -10,8 +10,15 @@ const TestimonialCard = ({ text, from, title }) => {
         <RiDoubleQuotesL />
       </div>
       <div className="h-52 lg:h-64 bg-ffsgLightPink ">
-        <RiImage2Fill className="text-ffsgPink h-full mx-auto" size="4em" />
-        <img />
+        {!img ? (
+          <RiImage2Fill className="text-ffsgPink h-full mx-auto" size="4em" />
+        ) : (
+          <img
+            src={`/${img}`}
+            className="h-full w-full object-cover"
+            alt="testimonial-image"
+          />
+        )}
       </div>
       <div className="text-sm md:text-base text-gray-500 bg-gray-50 p-6 pt-12">
         <p className={readMore ? "line-clamp-none" : "line-clamp-4"}>{text}</p>
@@ -23,8 +30,9 @@ const TestimonialCard = ({ text, from, title }) => {
         </span>
         <p className="mt-4">
           <span className="text-black font-semibold text-base lg:text-lg">
-            {from},
+            {from}
           </span>{" "}
+          <br />
           {title}
         </p>
       </div>

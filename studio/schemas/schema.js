@@ -7,6 +7,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 // We import object and document schemas
 import blockContent from "./blockContent";
 import tag from "./tag";
+import categories from "./categories";
 import commercial from "./commercial";
 import home from "./home";
 import youtube from "./youtube";
@@ -22,6 +23,7 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     tag,
+    categories,
     commercial,
     home,
     blog,

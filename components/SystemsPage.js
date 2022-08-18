@@ -59,7 +59,7 @@ const SystemsPage = ({ system }) => {
       <div className="mt-28 md:mt-36 max-w-7xl mx-auto px-6 md:px-14">
         <div className="pb-4 md:pb-8 bg-white space-y-5">
           <div className="md:flex md:items-center space-y-1 md:space-y-0 md:space-x-3 text-xs text-ffsgPink">
-            {system.tags?.map((tag) => (
+            {system.categories?.map((tag) => (
               <div key={tag._id} className="inline-block relative group">
                 <p className="inline-block mr-1 md:mr-0 py-1 px-3 hover:bg-purple-100 hover:border-ffsgPurple hover:text-ffsgPurple cursor-pointer transition-colors duration-150 bg-ffsgLightPink border border-ffsgPink rounded-full">
                   {tag.title}

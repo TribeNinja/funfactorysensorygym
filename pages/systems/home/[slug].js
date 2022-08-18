@@ -29,7 +29,7 @@ export const getServerSideProps = async ({ params }) => {
     title,
     gallery,
     slug,
-    tags[]->
+    categories[]->
   }
   `;
 
@@ -43,7 +43,7 @@ export const getServerSideProps = async ({ params }) => {
     gallery,
     gymInformation,
     slug,
-    tags[]->
+    categories[]->
   }
   `;
   const home = await sanityClient.fetch(queryHome, {

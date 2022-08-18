@@ -7,9 +7,9 @@ import { useRouter } from "next/router";
 import SystemGallery from "components/SystemGallery";
 import { MdOutlineRemoveCircleOutline } from "react-icons/md";
 
-const Systems = ({ tags, all, commercials, homes }) => {
+const Systems = ({ tags, categories, all, commercials, homes }) => {
   const [select, setSelect] = useState("commercial");
-  const [searchType, setSearchType] = useState("title");
+  const [searchType, setSearchType] = useState("gym info");
   const [selectedTags, setSelectedTags] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
   const [searchedItems, setSearchedItems] = useState([]);
@@ -24,7 +24,13 @@ const Systems = ({ tags, all, commercials, homes }) => {
     if (select === "all") {
       all.map((item) => {
         let allIncluded = [];
-        item.tags.filter((itemTag) => {
+        item.tags?.filter((itemTag) => {
+          selectedTags.filter(
+            (tag) => tag === itemTag.title && allIncluded.push(true)
+          );
+          allIncluded.length === selectedTags.length && items.push(item);
+        });
+        item.categories?.filter((itemTag) => {
           selectedTags.filter(
             (tag) => tag === itemTag.title && allIncluded.push(true)
           );
@@ -46,7 +52,7 @@ const Systems = ({ tags, all, commercials, homes }) => {
     if (select === "home") {
       homes.map((item) => {
         let allIncluded = [];
-        item.tags.filter((itemTag) => {
+        item.categories.filter((itemTag) => {
           selectedTags.filter(
             (tag) => tag === itemTag.title && allIncluded.push(true)
           );
@@ -64,7 +70,13 @@ const Systems = ({ tags, all, commercials, homes }) => {
 
     filteredItems.filter((item) => {
       const addGymInfo =
-        item?.gymInformation?.location + " " + item?.gymInformation?.name;
+        item?.gymInformation?.location +
+        " " +
+        item?.gymInformation?.name +
+        " " +
+        item?.gymInformation?.email +
+        " " +
+        item?.gymInformation?.phone;
 
       const title = item.title;
 
@@ -214,9 +226,9 @@ const Systems = ({ tags, all, commercials, homes }) => {
         <div className="px-6 md:px-14 mt-10">
           <div className="flex flex-col md:flex-row md:space-x-4 space-y-3 md:space-y-0">
             <div className="flex flex-1">
-              <div className="relative w-1/3 md:w-auto">
+              {/* <div className="relative w-1/3 md:w-auto">
                 <select
-                  defaultValue="title"
+                  defaultValue="gym info"
                   onChange={(e) => setSearchType(e.target.value)}
                   className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 >
@@ -232,7 +244,7 @@ const Systems = ({ tags, all, commercials, homes }) => {
                     <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                   </svg>
                 </div>
-              </div>
+              </div> */}
               <div className="flex-1">
                 <input
                   className="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-100 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -240,7 +252,7 @@ const Systems = ({ tags, all, commercials, homes }) => {
                   placeholder={
                     searchType === "title"
                       ? "Search by system title..."
-                      : "Search by gym name, address..."
+                      : "Search with gym name, address, email or phone number..."
                   }
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
@@ -256,11 +268,30 @@ const Systems = ({ tags, all, commercials, homes }) => {
                 <option hidden value="Select categories">
                   Select categories ⮧
                 </option>
-                {tags?.map((tag) => (
-                  <option value={tag.title} key={tag._id}>
-                    {tag.title}
-                  </option>
-                ))}
+                {select == "all" &&
+                  categories?.map((tag) => (
+                    <option value={tag.title} key={tag._id}>
+                      {tag.title}
+                    </option>
+                  ))}
+                {select == "all" &&
+                  tags?.map((tag) => (
+                    <option value={tag.title} key={tag._id}>
+                      {tag.title}
+                    </option>
+                  ))}
+                {select == "commercial" &&
+                  tags?.map((tag) => (
+                    <option value={tag.title} key={tag._id}>
+                      {tag.title}
+                    </option>
+                  ))}
+                {select == "home" &&
+                  categories?.map((tag) => (
+                    <option value={tag.title} key={tag._id}>
+                      {tag.title}
+                    </option>
+                  ))}
               </select>
             </div>
           </div>
@@ -310,6 +341,11 @@ export const getServerSideProps = async () => {
     title,
   }
   `;
+  const queryCategories = `*[_type == 'categories'] {
+    _id,
+    title,
+  }
+  `;
   const queryAll = `*[_type in ['commercial', 'home']] | order(publishedAt desc) {
     _type,
     _id,
@@ -317,6 +353,7 @@ export const getServerSideProps = async () => {
     gallery,
     slug,
     gymInformation,
+    categories[]->,
     tags[]->
   }
   `;
@@ -337,11 +374,12 @@ export const getServerSideProps = async () => {
     gallery,
     slug,
     gymInformation,
-    tags[]->
+    categories[]->
   }
   `;
 
   const tags = await sanityClient.fetch(queryTags);
+  const categories = await sanityClient.fetch(queryCategories);
   const all = await sanityClient.fetch(queryAll);
   const commercials = await sanityClient.fetch(queryCommercial);
   const homes = await sanityClient.fetch(queryHome);
@@ -349,6 +387,7 @@ export const getServerSideProps = async () => {
   return {
     props: {
       tags,
+      categories,
       all,
       commercials,
       homes,

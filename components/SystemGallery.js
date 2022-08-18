@@ -59,25 +59,54 @@ const SystemGallery = ({ systems }) => {
               </a>
             </Link>
             <div className="flex items-center my-5 space-x-2 text-xs text-ffsgPink">
-              {system.tags.map((tag, i) => {
-                if (i < (isMobile ? 1 : 2)) {
-                  return (
-                    <p
-                      key={tag._id}
-                      className="py-1 px-2 bg-ffsgLightPink border border-ffsgPink rounded-full"
+              {system._type == "commercial"
+                ? system.tags.map((tag, i) => {
+                    if (i < (isMobile ? 1 : 2)) {
+                      return (
+                        <p
+                          key={tag._id}
+                          className="py-1 px-2 bg-ffsgLightPink border border-ffsgPink rounded-full"
+                        >
+                          {tag.title}
+                        </p>
+                      );
+                    }
+                  })
+                : system.categories.map((tag, i) => {
+                    if (i < (isMobile ? 1 : 2)) {
+                      return (
+                        <p
+                          key={tag._id}
+                          className="py-1 px-2 bg-ffsgLightPink border border-ffsgPink rounded-full"
+                        >
+                          {tag.title}
+                        </p>
+                      );
+                    }
+                  })}
+
+              {system._type == "commercial"
+                ? system.tags.length > (isMobile ? 1 : 2) && (
+                    <Link
+                      href={`/systems/${system._type}/${system.slug.current}`}
                     >
-                      {tag.title}
-                    </p>
-                  );
-                }
-              })}
-              {system.tags.length > (isMobile ? 1 : 2) && (
-                <Link href={`/systems/${system._type}/${system.slug.current}`}>
-                  <a className="py-1 px-2 hover:bg-purple-100 hover:border-ffsgPurple hover:text-ffsgPurple cursor-pointer transition-colors duration-150 bg-ffsgLightPink border border-ffsgPink rounded-full">
-                    +{system.tags.length - (isMobile ? 1 : 2)}
-                  </a>
-                </Link>
-              )}
+                      <a className="py-1 px-2 hover:bg-purple-100 hover:border-ffsgPurple hover:text-ffsgPurple cursor-pointer transition-colors duration-150 bg-ffsgLightPink border border-ffsgPink rounded-full">
+                        +{system.tags.length - (isMobile ? 1 : 2)}
+                      </a>
+                    </Link>
+                  )
+                : system.categories.length > (isMobile ? 1 : 2) && (
+                    <Link
+                      href={`/systems/${system._type}/${system.slug.current}`}
+                    >
+                      <a className="py-1 px-2 hover:bg-purple-100 hover:border-ffsgPurple hover:text-ffsgPurple cursor-pointer transition-colors duration-150 bg-ffsgLightPink border border-ffsgPink rounded-full">
+                        +
+                        {system._type == "commercial"
+                          ? system.tags.length - (isMobile ? 1 : 2)
+                          : system.categories.length - (isMobile ? 1 : 2)}
+                      </a>
+                    </Link>
+                  )}
             </div>
 
             <hr className="my-5 md:my-7" />

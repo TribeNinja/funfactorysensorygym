@@ -164,17 +164,11 @@ export default {
     },
 
     {
-      name: "tags",
-      title: "Therapy",
+      name: "categories",
+      title: "Home Categories",
       type: "array",
-      of: [{ type: "reference", to: { type: "tag" } }],
+      of: [{ type: "reference", to: { type: "categories" } }],
       validation: (Rule) => Rule.required(),
     },
-    // {
-    //   name: "publishedAt",
-    //   title: "Published at",
-    //   type: "datetime",
-    //   validation: (Rule) => Rule.required(),
-    // },
   ],
 };

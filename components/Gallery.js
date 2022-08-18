@@ -101,24 +101,44 @@ const Gallery = ({ systems, type, short, title, description }) => {
                   <div className="p-4 flex justify-between items-center bg-white">
                     <div className="space-y-2">
                       <div className="flex items-center space-x-2 text-xs md:text-sm text-ffsgPink">
-                        {system.tags.map((tag, i) => {
-                          if (i < (isMobile ? 1 : 2)) {
-                            return (
-                              <p
-                                key={tag._id}
-                                className="hover:text-ffsgPurple cursor-pointer transition-colors duration-150"
-                              >
-                                {tag.title}
-                                {system.tags.length > 1 && ","}
+                        {type == "commercial"
+                          ? system.tags.map((tag, i) => {
+                              if (i < (isMobile ? 1 : 2)) {
+                                return (
+                                  <p
+                                    key={tag._id}
+                                    className="hover:text-ffsgPurple cursor-pointer transition-colors duration-150"
+                                  >
+                                    {tag.title}
+                                    {system.tags.length > 1 && ","}
+                                  </p>
+                                );
+                              }
+                            })
+                          : system.categories.map((tag, i) => {
+                              if (i < (isMobile ? 1 : 2)) {
+                                return (
+                                  <p
+                                    key={tag._id}
+                                    className="hover:text-ffsgPurple cursor-pointer transition-colors duration-150"
+                                  >
+                                    {tag.title}
+                                    {system.categories.length > 1 && ","}
+                                  </p>
+                                );
+                              }
+                            })}
+                        {type == "commercial"
+                          ? system.tags.length > (isMobile ? 1 : 2) && (
+                              <p className="hover:text-ffsgPurple cursor-pointer transition-colors duration-150">
+                                +{system.tags.length - (isMobile ? 1 : 2)}
                               </p>
-                            );
-                          }
-                        })}
-                        {system.tags.length > (isMobile ? 1 : 2) && (
-                          <p className="hover:text-ffsgPurple cursor-pointer transition-colors duration-150">
-                            +{system.tags.length - (isMobile ? 1 : 2)}
-                          </p>
-                        )}
+                            )
+                          : system.categories.length > (isMobile ? 1 : 2) && (
+                              <p className="hover:text-ffsgPurple cursor-pointer transition-colors duration-150">
+                                +{system.categories.length - (isMobile ? 1 : 2)}
+                              </p>
+                            )}
                       </div>
                       <p className="text-base md:text-lg font-semibold line-clamp-1 ">
                         {system.title}

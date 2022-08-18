@@ -50,21 +50,30 @@ const Hero = () => {
         </Link>
       </header>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
-        <div className="mt-28 md:mt-40 lg:mt-56 items-center px-6 md:px-14">
+        <div className="mt-28 md:mt-36 lg:mt-48 items-center px-6 md:px-14">
           <div className="space-y-6 md:space-y-10 max-w-md">
             <h2 className="font-semibold text-3xl md:text-5xl md:leading-normal leading-snug text-center md:text-left">
               Build A Sensory Gym You Can Be Proud Of
             </h2>
-            <p className="font-light text-gray-500 leading-relaxed">
+            <p className="leading-relaxed">
               Fun Factory Sensory Gym is the inventor of the custom designed
-              indoor sensory gym. Our sensory gyms are designed to accomodate
-              the needs of children, parents, and healthcare professionals. We
-              are the only company in the world insured and bonded to our
-              sensory gym installations.
+              indoor sensory gym and therapy equipment. Our sensory gyms are
+              designed to accomodate the needs of children, parents, and
+              healthcare professionals. We are the only company in the world
+              insured and bonded to our sensory gym installations.
             </p>
+            <div className="flex items-center space-x-3">
+              <div className="text-white p-3 bg-ffsgPink inline-block rounded-full">
+                <TiTickOutline className="text-2xl" />
+              </div>
+              <p className="font-medium leading-relaxed flex">
+                A percentage of every installation gives back to families with
+                special needs.
+              </p>
+            </div>
           </div>
 
-          <div className="flex items-center space-x-5 mt-6 md:mt-10 lg:mt-16">
+          <div className="flex items-center space-x-5 mt-10 lg:mt-16">
             <Link href="/contact">
               <a className="px-6 py-3 md:px-8 md:py-4 text-sm md:text-base bg-ffsgPink text-white rounded-lg flex items-center space-x-2 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold">
                 <p>Free Consultation</p>
@@ -74,7 +83,7 @@ const Hero = () => {
 
             <Link href="/#process">
               <a className="relative nav hover:text-ffsgPink cursor-pointer text-sm md:text-base transition-all duration-200">
-                <span className="nav-link">Our Process</span>
+                <span className="nav-link font-medium">Our Process</span>
               </a>
             </Link>
           </div>
@@ -88,7 +97,7 @@ const Hero = () => {
               loop
               muted
             >
-              <source src="/videos/sample.mp4" type="video/mp4" />
+              <source src="/videos/sample3.mp4" type="video/mp4" />
             </video>
             <video
               className="h-[35rem] md:h-[96vh] w-full object-cover"
@@ -106,7 +115,7 @@ const Hero = () => {
               loop
               muted
             >
-              <source src="/videos/sample3.mp4" type="video/mp4" />
+              <source src="/videos/sample.mp4" type="video/mp4" />
             </video>
             {/* <img
               src="/hero.png"

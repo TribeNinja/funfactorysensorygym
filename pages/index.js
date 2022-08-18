@@ -68,7 +68,7 @@ export const getServerSideProps = async () => {
     title,
     gallery,
     slug,
-    tags[]->
+    categories[]->
   }
   `;
 
