@@ -52,7 +52,7 @@ const Contact = () => {
       message,
       selectedSystem,
     });
-    setSuccess("Successful Sent!");
+    setSuccess("Sent Successfully!");
     setFirstName("");
     setLastName("");
     setPhone("");
@@ -79,9 +79,10 @@ const Contact = () => {
 
           <div className="mt-6 text-gray-500">
             <p className="leading-relaxed">
-              Tell Us About Your Awesome Ideas. We’ve done thousands of sensory
-              gym installs across North America for hospitals, pediatric
-              clinics, universities, daycares, homes, and more!
+              We’ve done thousands of sensory gym installs across North America,
+              but every child is different and has their own needs. What are
+              your ideas for improving sensory gym layouts? Tell us about them
+              below.
             </p>
           </div>
         </div>

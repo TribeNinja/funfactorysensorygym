@@ -41,16 +41,16 @@ const TestimonialSection = () => {
             title="Clinic owner"
           />
           <TestimonialCard
+            text="After five years in practice, I decided that I needed to upgrade the look of my office to allow for optimal patient care. Upon researching some possibilities, I came across the Fun Factory Sensory Gym. I immediately called the company to purchase my own gym unit. We scheduled an install date and in three short days, my gym and my vision were complete. My patients and their parents walk in and are amazed at the beautiful and fun set up. I truly feel that my patients are getting the most effective and efficient care because I have the best equipment to address their individual needs. With the Fun Factory Gym equipment, I am able to help these children improve by Leaps and Bounds!"
+            img="testimonial3.jpg"
+            from="Jill Kissel"
+            title="Clinic Owner"
+          />
+          <TestimonialCard
             text="We had a great experience working with Fun Factory Sensory Gym to design and build our gym at our new facility. They were very responsive and easy to work with. I love that there is so much included with the design, and they think of every little detail! We are so excited to be able to move into our new space, I know all of the kiddos we work with are going to love the new sensory gym!"
             img=""
             from="Lauren Jones"
             title="Clinic owner"
-          />
-          <TestimonialCard
-            text="The Kaufman Children’s Center was proud to announce an exciting upgrade made here at the KCC. Over a long weekend in late January 2013, we completed a huge remodel to our sensory gym."
-            img=""
-            from="The Kaufman"
-            title="Gym"
           />
         </Slider>
       </div>

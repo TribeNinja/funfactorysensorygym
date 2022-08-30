@@ -23,9 +23,9 @@ export default async (req, res) => {
   });
 
   transporter.sendMail({
-    from: `${firstName} ${lastName} <${email}>`, // sender address
-    to: process.env.EMAIL_SERVER_USER,
-    subject: "Fun Factory Sensory Gym website form submission", // Subject line
+    from: process.env.EMAIL_SERVER_USER, // sender address
+    to: process.env.EMAIL_TO_BE_SENT_TO,
+    subject: "Fun Factory Sensory Gym website inquiry form", // Subject line
     html: `
     <p>First Name: ${firstName}</p>
     <p>Last Name: ${lastName}</p>
