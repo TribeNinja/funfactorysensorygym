@@ -58,7 +58,7 @@ const Hero = () => {
             <p className="leading-relaxed">
               Fun Factory Sensory Gym is a specialty company that specializes in
               custom indoor sensory gym and therapy equipment. We provide
-              occupational therapy, aBA clinics, physical therapy clinics,
+              occupational therapy, ABA clinics, physical therapy clinics,
               speech therapy, pediatric therapy and develop mental and
               therapeutic services for individuals with Autism Spectrum Disorder
               (ASD), developmental disabilities and other special needs. Our
