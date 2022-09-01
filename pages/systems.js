@@ -183,68 +183,29 @@ const Systems = ({ tags, categories, all, commercials, homes }) => {
 
           <div className="mt-6 text-gray-500">
             <h3 className="font-semibold">
-              {select === "commercial" && "WE ACCOMMODATE LARGER SPACES"}
-              {select === "home" && "WE ACCOMMODATE SMALL SPACES"}
-            </h3>
-            <p className={readMore1 ? "line-clamp-none" : "line-clamp-2"}>
-              {select === "commercial" &&
-                "Large open play / multi-functional facilities"}
-              {select === "home" &&
-                "Homes, Basements, Attics, Garages, and bedrooms! We understand that space can be limited, that’s why our designers take into consideration every square inch of space in your home. Our in-home systems are designed to provide your family with plenty of floor space to play, as well as move about with ease when the system isn’t being used."}
-              {select === "all" &&
-                "FFSG creates a state-of-the-art multi-sensory environment, providing every child positive play in a therapeutic environment. Throughout our building process, our clients can be assured of the level of professionalism, skills, and service of our team. FFSG systems fit nicely into all kinds of spaces with no shortage of options to keep children engaged. Our products are carefully designed based on your specifications, size, and budget. Our products are created to educate, challenge, stimulate, but most importantly, to bring the outdoor playing experience into a more private setting. At, FFSG we value your time and business. Our customer service and design teams are available for inquiries and consultations year-round. Our installations are rendered assuring no shutdown time."}
-            </p>
-            {select !== "commercial" && (
-              <span
-                className="text-ffsgPink underline hover:text-ffsgPurple cursor-pointer"
-                onClick={() => setReadMore1(!readMore1)}
-              >
-                {!readMore1 ? "Read more..." : "Read less..."}
-              </span>
-            )}
-
-            <h3 className="font-semibold mt-4">
               {select === "commercial" && "WHAT DO WE CONSIDER A LARGE SPACE?"}
               {select === "home" && "WHAT DO WE CONSIDER A SMALL SPACE?"}
             </h3>
-            <p className={readMore2 ? "line-clamp-none" : "line-clamp-2"}>
+            <p className={readMore1 ? "line-clamp-none" : "line-clamp-2"}>
               {select === "commercial" &&
-                "Our large open play/multi-functional facilities are designed from the center out. This allows us to capture the center of the room and design out to all four corners making the entire space flow and functionally useful to everyone using it. Our large sensory gyms are versatile and can accommodate many therapists and children at the same time. With our large sensory gyms, therapists can now broaden their treatment options. Our sensory gyms help children acclimate to new stimuli and help foster independence. The sensory gyms include swings, ball pits, zip-lines, monkey bars, rock walls, trampolines, castle structures, seclusion areas, and jump decks. A trained therapist can introduce all of these activities to children with ease and mobility. Over time children will gradually increase confidence not only during therapy but also at home and school. Many clinics, for which we have built large sensory gyms, have branched out into second and third locations; allowing them to serve many more families. Many of our large facilities also host special events such as birthday parties, open play, enrichment programs, and numerous other community and special needs programs, combining fun and stimulation in one safe, engaging system."}
+                "Our large sensory gyms are designed from the center out meaning that our therapists can focus their therapy time on eliciting a larger number of sensory responses in each child. The large open play areas enable you to accommodate many children at one time. Children will acclimate with ease and mobility to new stimuli and over time they will gradually increase confidence not only during therapy but also at home and school."}
               {select === "home" &&
-                "Our home systems are designed to provide reinforcement therapy. In reinforcement therapy, a child is taking what was learned in a clinical setting and applying it in the comfort of their home environment. With our custom-designed, in-home sensory gyms children can develop their fine and gross motor skills in a familiar setting, regardless of the elements. Many parents have reported the immediate impact our sensory gyms have had on their children’s lives. From increased attentiveness to more developed timing, strength, and rhythm, the possibilities are endless with our sensory gyms as a companion. Consistent regulation using our gyms has also greatly improved spatial awareness and fine and gross motor skills. Whether your child is a proprioceptive seeker or avoider our sensory gyms are designed to accommodate many needs and abilities. This is an investment that truly pays dividends for the future of your children, and creates the space and opportunity for children and their families to bond."}
+                "Our custom-designed, in-home sensory gyms have helped improve the lives of many children. From increased attentiveness to more developed timing, strength, and rhythm, the possibilities are endless with our sensory gyms as a companion. Our gyms bring the comfort and familiarity found at our centers to your home with customized designs that make an immediate impact on your child’s growth. We’re proud to provide this opportunity to our customers"}
+              {select === "all" &&
+                "Fun Factory Sensory Gym creates a state-of-the-art multi-sensory environment, providing every child positive play in a therapeutic environment. Throughout our building process, our clients can be assured of the level of professionalism, skills, and service of our team. Our systems fit nicely into all kinds of spaces with no shortage of options to keep children engaged."}
             </p>
-            {(select === "commercial" || select === "home") && (
-              <span
-                className="text-ffsgPink underline hover:text-ffsgPurple cursor-pointer"
-                onClick={() => setReadMore2(!readMore2)}
-              >
-                {!readMore2 ? "Read more..." : "Read less..."}
-              </span>
-            )}
+
+            <span
+              className="text-ffsgPink underline hover:text-ffsgPurple cursor-pointer"
+              onClick={() => setReadMore1(!readMore1)}
+            >
+              {!readMore1 ? "Read more..." : "Read less..."}
+            </span>
           </div>
         </div>
         <div className="px-6 md:px-14 mt-10">
           <div className="flex flex-col md:flex-row md:space-x-4 space-y-3 md:space-y-0">
             <div className="flex flex-1">
-              {/* <div className="relative w-1/3 md:w-auto">
-                <select
-                  defaultValue="gym info"
-                  onChange={(e) => setSearchType(e.target.value)}
-                  className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                >
-                  <option value="title">System Title</option>
-                  <option value="gym info">Gym Information</option>
-                </select>
-                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                  <svg
-                    className="fill-current h-4 w-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                  </svg>
-                </div>
-              </div> */}
               <div className="flex-1">
                 <input
                   className="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-100 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
