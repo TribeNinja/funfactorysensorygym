@@ -25,7 +25,7 @@ const Cta = () => {
     const url = "https://api.cc.email/v3/contacts/sign_up_form";
     const body = {
       email_address: email,
-      list_memberships: ["211717f2-2941-11ed-9bd5-fa163e5bf31a"],
+      list_memberships: [process.env.NEXT_PUBLIC_CONSTANT_CONTACT_LIST_ID],
     };
 
     axios
