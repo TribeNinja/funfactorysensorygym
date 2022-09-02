@@ -267,8 +267,8 @@ const SystemsPage = ({ system }) => {
           />
         </article>
         <div className="space-y-3 text-ffsgPink mt-10">
-          <p>Share this</p>
-          <div className="flex space-x-4 md:space-x-6 text-2xl md:text-3xl">
+          <p className="text-md md:text-lg">Share this</p>
+          <div className="flex space-x-4 md:space-x-6 text-3xl md:text-4xl">
             <FacebookShareButton url={URL}>
               <TiSocialFacebook className="hover:text-ffsgPurple" />
             </FacebookShareButton>

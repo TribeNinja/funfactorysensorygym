@@ -90,7 +90,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col md:flex-row mt-8 md:mt-12 justify-between">
-          <div className="flex space-x-4 md:space-x-6 text-xl md:text-3xl">
+          <div className="flex justify-between md:space-x-6 text-3xl">
             <a
               href="https://www.facebook.com/FunFactoryGym"
               target="_blank"

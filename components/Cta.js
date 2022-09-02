@@ -79,6 +79,7 @@ const Cta = () => {
         /> */}
         <input
           onChange={(event) => setEmail(event?.target?.value ?? "")}
+          onKeyPress={(e) => e.key === "Enter" && handleFormSubmit()}
           value={email}
           name="email"
           type="email"
