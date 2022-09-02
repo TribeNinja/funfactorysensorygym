@@ -42,9 +42,9 @@ const AboutSection = () => {
               North America.
               <br />
               <br />
-              We at FFSG create a state-of-the-art multi-sensory environment,
-              providing every child with positive play in a therapeutic
-              environment.
+              We at fun factory sensory gym create a state-of-the-art
+              multi-sensory environment, providing every child with positive
+              play in a therapeutic environment.
               <br />
               <br />
               Throughout the building process, our clients can be assured to
@@ -60,11 +60,11 @@ const AboutSection = () => {
               more private setting.
               <br />
               <br />
-              At FFSG, your time and business are of utmost value to us. Our
-              customer service and design teams are available for inquiries and
-              consultations year-round. Our installations are rendered assuring
-              no shutdown time. Contact us for a unique experience, tailored to
-              your needs!
+              At fun factory sensory gym, your time and business are of utmost
+              value to us. Our customer service and design teams are available
+              for inquiries and consultations year-round. Our installations are
+              rendered assuring no shutdown time. Contact us for a unique
+              experience, tailored to your needs!
             </p>
             <span
               className="text-ffsgPink underline hover:text-ffsgPurple cursor-pointer"
