@@ -37,7 +37,11 @@ const Cta = () => {
       })
       .then((res) => {
         console.log(res);
-        setError("Subscribed!");
+        if (res?.status == 201 || res?.status == 200) {
+          setError("Subscribed!");
+        } else {
+          setError("Something went wrong!");
+        }
       });
   };
 
