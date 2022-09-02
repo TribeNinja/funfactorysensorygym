@@ -22,11 +22,12 @@ export default async (req, res) => {
     },
   });
 
-  transporter.sendMail({
-    from: process.env.EMAIL_SERVER_USER, // sender address
-    to: process.env.EMAIL_TO_BE_SENT_TO,
-    subject: "Fun Factory Sensory Gym website inquiry form", // Subject line
-    html: `
+  transporter
+    .sendMail({
+      from: process.env.EMAIL_SERVER_USER, // sender address
+      to: process.env.EMAIL_TO_BE_SENT_TO,
+      subject: "Fun Factory Sensory Gym website inquiry form", // Subject line
+      html: `
     <p>First Name: ${firstName}</p>
     <p>Last Name: ${lastName}</p>
     <p>Email: ${email}</p>
@@ -36,6 +37,15 @@ export default async (req, res) => {
     <p>Message: ${message}</p>
     
     `, // html body
-  });
-  res.redirect(301, "/contact");
+    })
+    .catch((err) => {
+      res.status(400).json({ status: "fail" });
+    })
+    .then((result) => {
+      if (result) {
+        res.status(200).json({ status: "success" });
+      } else {
+        res.status(200).json({ status: "fail" });
+      }
+    });
 };

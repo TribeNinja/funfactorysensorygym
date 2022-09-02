@@ -3,6 +3,7 @@ import Footer from "components/Footer";
 import Header from "components/Header";
 import Head from "next/head";
 import { useState } from "react";
+import { useAlert } from "react-alert";
 
 const Contact = () => {
   const [firstName, setFirstName] = useState(null);
@@ -14,8 +15,7 @@ const Contact = () => {
   const [email, setEmail] = useState(null);
   const [selectedSystem, setSelectedSystem] = useState(null);
 
-  const [warn, setWarn] = useState(null);
-  const [success, setSuccess] = useState(null);
+  const alert = useAlert();
 
   const submit = async (e) => {
     e.preventDefault();
@@ -28,8 +28,7 @@ const Contact = () => {
       !message ||
       !email
     ) {
-      setSuccess(null);
-      return setWarn("Please fill out all the fields!");
+      return alert.info("Please fill out all the fields!");
     }
     if (
       !String(email)
@@ -38,27 +37,35 @@ const Contact = () => {
           /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         )
     ) {
-      setSuccess(null);
-      return setWarn("Please enter a valid email address!");
+      return alert.info("Please enter a valid email address!");
     }
-    setWarn(null);
-    axios.post("/api/success", {
-      firstName,
-      lastName,
-      phone,
-      email,
-      city,
-      state,
-      message,
-      selectedSystem,
-    });
-    setSuccess("Sent Successfully!");
+    axios
+      .post("/api/success", {
+        firstName,
+        lastName,
+        phone,
+        email,
+        city,
+        state,
+        message,
+        selectedSystem,
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .then((res) => {
+        if (res?.data.status === "success") {
+          alert.success("Sent Successfully!");
+        } else {
+          alert.error("Something went wrong!");
+        }
+      });
+
     setFirstName("");
     setLastName("");
     setPhone("");
     setEmail("");
     setCity("");
-    setState("");
     setMessage("");
     setSelectedSystem(null);
   };
@@ -251,8 +258,6 @@ const Contact = () => {
             >
               <p>Submit</p>
             </button>
-            <p className={`${success && "hidden"} text-orange-400`}>{warn}</p>
-            <p className={`${warn && "hidden"} text-green-400`}>{success}</p>
           </form>
         </div>
       </div>

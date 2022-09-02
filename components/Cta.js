@@ -3,18 +3,23 @@
 
 import axios from "axios";
 import { useState } from "react";
+import { useAlert } from "react-alert";
 
 const Cta = () => {
   // const url = process.env.NEXT_PUBLIC_MAILCHIMP_URL;
-  const [error, setError] = useState(null);
   const [email, setEmail] = useState(null);
 
-  const handleFormSubmit = () => {
-    setError(null);
+  const alert = useAlert();
 
-    if (!email) {
-      setError("Please enter a valid email address");
-      return null;
+  const handleFormSubmit = () => {
+    if (
+      !String(email)
+        .toLowerCase()
+        .match(
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        )
+    ) {
+      return alert.info("Please enter a valid email address!");
     }
 
     const url = "https://api.cc.email/v3/contacts/sign_up_form";
@@ -36,12 +41,12 @@ const Cta = () => {
         console.log(err);
       })
       .then((res) => {
-        console.log(res);
         if (res?.status == 201 || res?.status == 200) {
-          setError("Subscribed!");
+          alert.success("Subscribed!");
         } else {
-          setError("Something went wrong!");
+          alert.error("Something went wrong!");
         }
+        setEmail("");
       });
   };
 
@@ -74,16 +79,12 @@ const Cta = () => {
         /> */}
         <input
           onChange={(event) => setEmail(event?.target?.value ?? "")}
+          value={email}
           name="email"
           type="email"
           placeholder="Email"
           className="px-6 py-3 md:px-8 md:py-4 w-full md:w-96 md:rounded-l-lg text-sm md:text-base outline-none"
         />
-        {error && (
-          <div className="font-light text-sm md:text-base max-w-xl text-white">
-            {error}
-          </div>
-        )}
 
         <button
           onClick={handleFormSubmit}
