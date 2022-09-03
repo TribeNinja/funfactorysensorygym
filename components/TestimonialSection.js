@@ -48,7 +48,7 @@ const TestimonialSection = () => {
           />
           <TestimonialCard
             text="We had a great experience working with Fun Factory Sensory Gym to design and build our gym at our new facility. They were very responsive and easy to work with. I love that there is so much included with the design, and they think of every little detail! We are so excited to be able to move into our new space, I know all of the kiddos we work with are going to love the new sensory gym!"
-            img=""
+            img="testimonial4.jpeg"
             from="Lauren Jones"
             title="Clinic owner"
           />
