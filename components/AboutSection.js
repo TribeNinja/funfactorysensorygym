@@ -49,10 +49,10 @@ const AboutSection = () => {
               <br />
               Throughout the building process, our clients can be assured to
               experience the maximum level of professionalism, skills, and
-              service from our team. FFSG systems fit nicely into all kinds of
-              spaces with no shortage of options to keep children engaged. Our
-              products are carefully designed based on client specifications,
-              size, and budget.
+              service from our team. Fun factory sensory gym systems fit nicely
+              into all kinds of spaces with no shortage of options to keep
+              children engaged. Our products are carefully designed based on
+              client specifications, size, and budget.
               <br />
               <br />
               We create our products to educate, challenge, and stimulate, but
