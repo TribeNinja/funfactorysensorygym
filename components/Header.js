@@ -27,7 +27,7 @@ const Header = ({ StartFromTop }) => {
     <div
       className={`${
         !StartFromTop && !scroll
-          ? "opacity-100 translate-y-0 md:opacity-0 md:-translate-y-20"
+          ? "opacity-100 translate-y-0 md:opacity-0 md:-translate-y-40"
           : "opacity-100 translate-y-0 border-b"
       }  fixed top-0 w-full transition-all duration-150 items-center ring-b ring-b-gray-300 bg-white  z-30`}
     >
