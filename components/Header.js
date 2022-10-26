@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { useEffect, useState } from "react";
 import { FiArrowUpRight, FiMenu } from "react-icons/fi";
+import { RiChatHeartFill } from "react-icons/ri";
 import { Fade } from "react-reveal";
 
 const Header = ({ StartFromTop }) => {
@@ -30,6 +31,13 @@ const Header = ({ StartFromTop }) => {
           : "opacity-100 translate-y-0 border-b"
       }  fixed top-0 w-full transition-all duration-150 items-center ring-b ring-b-gray-300 bg-white  z-30`}
     >
+      <div className="flex items-center justify-center p-2 px-3 md:p-3 bg-[#0db14b] text-white">
+        <RiChatHeartFill className="text-3xl md:text-2xl mr-2 animate-pulse" />
+        <p className="text-xs md:text-base">
+          Proceeds from each purchase of a Fun Factory Sensory Gym install go to
+          help a family with children with special needs.
+        </p>
+      </div>
       <Fade left={true} duration={500} opposite when={menuIsOpen}>
         <div
           className={`${

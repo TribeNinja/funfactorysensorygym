@@ -1,24 +1,17 @@
+import Image from "next/image";
 import { useState } from "react";
-import { RiDoubleQuotesL, RiImage2Fill } from "react-icons/ri";
+import { RiDoubleQuotesL } from "react-icons/ri";
 
 const TestimonialCard = ({ text, from, title, img }) => {
   const [readMore, setReadMore] = useState(false);
 
   return (
     <div className="md:mx-3 pb-6 relative">
-      <div className="absolute top-48 lg:top-56 left-6 md:left-10 text-white p-3 md:text-3xl lg:text-4xl bg-ffsgPink inline-block rounded-full shadow-lg shadow-pink-300">
+      <div className="z-10 absolute top-48 lg:top-56 left-6 md:left-10 text-white p-3 md:text-3xl lg:text-4xl bg-ffsgPink inline-block rounded-full shadow-lg shadow-pink-300">
         <RiDoubleQuotesL />
       </div>
-      <div className="h-52 lg:h-64 bg-ffsgLightPink ">
-        {!img ? (
-          <RiImage2Fill className="text-ffsgPink h-full mx-auto" size="4em" />
-        ) : (
-          <img
-            src={`/${img}`}
-            className="h-full w-full object-cover"
-            alt="testimonial-image"
-          />
-        )}
+      <div className="relative h-52 lg:h-64 bg-ffsgLightPink object-cover">
+        <Image src={img} objectFit="cover" layout="fill" alt={from} />
       </div>
       <div className="text-sm md:text-base text-gray-500 bg-gray-50 p-6 pt-12">
         <p className={readMore ? "line-clamp-none" : "line-clamp-4"}>{text}</p>

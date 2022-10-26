@@ -50,7 +50,7 @@ const Hero = () => {
         </Link>
       </header>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
-        <div className="mt-28 md:mt-36 lg:mt-48 items-center px-6 md:px-14">
+        <div className="mt-40 md:mt-36 lg:mt-48 items-center px-6 md:px-14">
           <div className="space-y-6 md:space-y-8 max-w-lg">
             <h2 className="font-semibold text-3xl md:text-5xl md:leading-normal leading-snug text-center md:text-left">
               One Gym, Unlimited Possibilities

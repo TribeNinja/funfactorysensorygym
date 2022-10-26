@@ -135,7 +135,7 @@ const Systems = ({ tags, categories, all, commercials, homes }) => {
 
       <Header StartFromTop={true} />
 
-      <div className="mt-36 max-w-7xl mx-auto">
+      <div className="mt-48 max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-3 items-center mx-6 md:mx-14 text-lg md:text-xl font-semibold border-2 border-ffsgPink text-ffsgPink uppercase">
           <div
             onClick={() => {

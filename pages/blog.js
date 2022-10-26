@@ -31,7 +31,7 @@ function blog({ blogs }) {
         ></meta>
       </Head>
       <Header StartFromTop={true} />
-      <div className="mt-36 max-w-7xl mx-auto">
+      <div className="mt-48 max-w-7xl mx-auto">
         <div className="mx-6 md:mx-14">
           <div className="text-center my-16 mx-auto">
             <h1 className="text-3xl font-bold uppercase">Blog</h1>
