@@ -34,8 +34,8 @@ const Header = ({ StartFromTop }) => {
       <div className="flex items-center justify-center p-2 px-3 md:p-3 bg-[#0db14b] text-white">
         <RiChatHeartFill className="text-3xl md:text-2xl mr-2 animate-pulse" />
         <p className="text-xs md:text-base">
-          Proceeds from each purchase of a Fun Factory Sensory Gym install go to
-          help a family with children with special needs.
+          Proceeds from each purchase of a Fun Factory Sensory Gym installation
+          helps families with special needs children
         </p>
       </div>
       <Fade left={true} duration={500} opposite when={menuIsOpen}>
@@ -94,7 +94,13 @@ const Header = ({ StartFromTop }) => {
             </a>
           </Link>
         </div>
-        <div className="md:hidden p-2 ml-auto text-lg border border-ffsgPink text-ffsgPink">
+        <div className="flex items-center space-x-2 font-medium md:font-semibold ml-auto">
+          <p className="text-[#000054]">Made in USA</p>
+          <div className="w-6 md:w-8 lg:w-10 ">
+            <img src="/usa-flag.gif" alt="" />
+          </div>
+        </div>
+        <div className="md:hidden p-2 ml-4 text-lg border border-ffsgPink text-ffsgPink">
           {menuIsOpen ? (
             <FiMenu onClick={() => setMenuIsOpen(false)} />
           ) : (
@@ -102,8 +108,8 @@ const Header = ({ StartFromTop }) => {
           )}
         </div>
         <Link href="/contact">
-          <a className="hidden md:flex ml-auto items-center text-white px-8 py-4 bg-ffsgPink rounded-lg space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold">
-            <p>Contact us</p>
+          <a className="hidden md:flex ml-6 items-center text-white px-8 py-4 bg-ffsgPink rounded-lg space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold">
+            <p>Contact Us</p>
             <FiArrowUpRight size="1.3em" />
           </a>
         </Link>

@@ -32,15 +32,15 @@ const Index = ({ commercials, homes }) => {
         systems={commercials}
         type="commercial"
         short="Commercial Systems"
-        title="We accommodate large spaces"
-        description="Our large open play/multi-functional facilities are designed from the center out. This allows us to capture the center of the room and design out to all four corners making the entire rooms flow and functionality useful to everyone using it. Our large sensory gyms are versatile and can accommodate many therapists and children at the same time."
+        title="We Accommodate Large Spaces"
+        description="Our large open play/multi-functional facilities are designed from the center out. This allows us to capture the center of the room and design out to all four corners making the entire room flow together making it functionally useful to everyone! Our large sensory gyms are versatile and can accommodate all types of therapists, practitioners, and children alike."
       />
       <Gallery
         systems={homes}
         type="home"
         short="Home Systems"
-        title="We accommodate small spaces"
-        description="Homes, Basements, Attics, Garages, and bedrooms! We understand that space can be limited, that’s why our designers take into consideration every square inch of space in your home. Our in-home systems are designed to provide your family with plenty of floor space not only to play but to also move about with ease when the system isn’t being used."
+        title="We Accommodate Small Spaces"
+        description="Homes, basements, attics, garages, and bedrooms - Yes, we do them all! We understand that space can be limited, that’s why our designers take into consideration every square inch of space in your home. Our in-home systems are designed to provide your family with plenty of floor space not only to play but to also move about with ease when the system isn’t being used."
       />
       <div className="max-w-7xl mx-auto">
         <ProcessSection />

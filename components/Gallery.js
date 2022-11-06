@@ -66,7 +66,7 @@ const Gallery = ({ systems, type, short, title, description }) => {
         <div className="hidden md:block ml-auto">
           <Link href={`/systems?sys=${type}`}>
             <a className="text-white px-8 py-4 bg-ffsgPink rounded-lg flex space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold">
-              <p>Show All projects</p>
+              <p>Show All Projects</p>
               <FiArrowUpRight size="1.3em" />
             </a>
           </Link>

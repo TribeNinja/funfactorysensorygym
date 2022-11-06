@@ -26,7 +26,7 @@ const Footer = () => {
               onClick={() => router.push("/contact")}
               className="ml-auto items-center px-6 py-3 md:px-8 md:py-4 bg-ffsgPink rounded-lg flex space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink text-sm md:text-base font-medium"
             >
-              <p>Free consultation</p>
+              <p>Free Consultation</p>
             </div>
           </div>
         </div>
@@ -45,21 +45,21 @@ const Footer = () => {
             <div className="hover:cursor-pointer hover:underline">
               <Link href="/systems?sys=all">
                 <a>
-                  <p>All systems</p>
+                  <p>All Systems</p>
                 </a>
               </Link>
             </div>
             <div className="hover:cursor-pointer hover:underline">
               <Link href="/systems?sys=commercial">
                 <a>
-                  <p>Commercial system</p>
+                  <p>Commercial System</p>
                 </a>
               </Link>
             </div>
             <div className="hover:cursor-pointer hover:underline">
               <Link href="/systems?sys=home">
                 <a>
-                  <p>Home system</p>
+                  <p>Home System</p>
                 </a>
               </Link>
             </div>
@@ -83,7 +83,7 @@ const Footer = () => {
             <div className="hover:cursor-pointer hover:underline">
               <Link href="/contact">
                 <a>
-                  <p>Contact us</p>
+                  <p>Contact Us</p>
                 </a>
               </Link>
             </div>

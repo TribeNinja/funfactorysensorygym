@@ -42,14 +42,14 @@ const AboutSection = () => {
               North America.
               <br />
               <br />
-              We at fun factory sensory gym create a state-of-the-art
+              We at Fun Factory Sensory Gym create a state-of-the-art
               multi-sensory environment, providing every child with positive
               play in a therapeutic environment.
               <br />
               <br />
               Throughout the building process, our clients can be assured to
               experience the maximum level of professionalism, skills, and
-              service from our team. Fun factory sensory gym systems fit nicely
+              service from our team. Fun Factory Sensory Gym systems fit nicely
               into all kinds of spaces with no shortage of options to keep
               children engaged. Our products are carefully designed based on
               client specifications, size, and budget.
@@ -60,7 +60,7 @@ const AboutSection = () => {
               more private setting.
               <br />
               <br />
-              At fun factory sensory gym, your time and business are of utmost
+              At Fun Factory Sensory Gym, your time and business are of utmost
               value to us. Our customer service and design teams are available
               for inquiries and consultations year-round. Our installations are
               rendered assuring no shutdown time. Contact us for a unique
@@ -76,7 +76,7 @@ const AboutSection = () => {
 
           <Link href="/contact">
             <a className="text-white px-6 py-3 md:px-8 md:py-4 bg-ffsgPink rounded-lg inline-block cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold text-sm md:text-base">
-              <p>Contact us</p>
+              <p>Contact Us</p>
             </a>
           </Link>
         </div>
