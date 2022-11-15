@@ -120,7 +120,7 @@ const AboutSection = () => {
                     )}
                   </VisibilitySensor>
                 </div>
-                <p>Installation Completed</p>
+                <p>Installations Completed</p>
               </div>
             </div>
           </div>

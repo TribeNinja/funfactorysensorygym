@@ -50,21 +50,25 @@ const Hero = () => {
         </Link>
       </header>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
-        <div className="mt-40 md:mt-36 lg:mt-48 items-center px-6 md:px-14">
+        <div className="mt-40 md:mt-36 lg:mt-40 items-center px-6 md:px-14">
           <div className="space-y-6 md:space-y-8 max-w-lg">
             <h2 className="font-semibold text-3xl md:text-5xl md:leading-normal leading-snug text-center md:text-left">
               One Gym, Unlimited Possibilities
             </h2>
             <p className="leading-relaxed">
-              Fun Factory Sensory Gym is a specialty company that specializes in
-              custom indoor sensory gym and therapy equipment. We provide
-              occupational therapy, ABA clinics, physical therapy clinics,
-              speech therapy, pediatric therapy and develop mental and
-              therapeutic services for individuals with Autism Spectrum Disorder
-              (ASD), developmental disabilities and other special needs. Our
-              mission is to improve the quality of life for children, adults,
-              and families living with disabilities by creating innovative
-              environments where self-expression thrives.
+              At Fun Factory Sensory Gym we design, manufacture, and
+              custom-install sensory gyms throughout the United States. From
+              learning about your space, the design of your sensory gym, and the
+              3-D rendering of your space - where you can see what your gym
+              would look like at your provided location, to the installation of
+              our custom products, our design specialists will create the most
+              effective and efficient sensory gym for all your needs. At Fun
+              Factory Sensory Gym our mission is to impact the lives of children
+              through developmental and therapeutic sensory play. If you are a
+              parent, therapist, or organization looking for a fun, healthy way
+              for your children to learn, develop, and grow; book a free
+              consultation with our design team today to learn more about Fun
+              Factory and your dream sensory gym.
             </p>
             <div className="flex items-center space-x-3">
               <div className="text-white p-3 bg-ffsgPink inline-block rounded-full">
@@ -161,7 +165,7 @@ const Hero = () => {
                       )}
                     </VisibilitySensor>
                   </div>
-                  <p className="text-sm">Installation Completed</p>
+                  <p className="text-sm">Installations Completed</p>
                 </div>
               </div>
             </div>
