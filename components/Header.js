@@ -35,7 +35,7 @@ const Header = ({ StartFromTop }) => {
         <RiChatHeartFill className="text-3xl md:text-2xl mr-2 animate-pulse" />
         <p className="text-xs md:text-base">
           Proceeds from each purchase of a Fun Factory Sensory Gym installation
-          helps families with special needs children
+          help families with special needs children.
         </p>
       </div>
       <Fade left={true} duration={500} opposite when={menuIsOpen}>

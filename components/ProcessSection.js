@@ -24,12 +24,12 @@ const ProcessSection = () => {
         <ProcessCard
           icon={<FaHardHat size="1.5em" />}
           title="Manufacture"
-          description="Once we have agreed on the design and layout, we will send over a contract for you to sign. The contract simply states that both parties have agreed upon the layout and cost. After the contract is signed we will begin milling your sensory gym. All of the preparatory work is done by our master carpenters who specialize specifically in sensory gym manufacture and installation. In most cases, the average time from concept to completion is between three days to one week."
+          description="Once we have agreed on the design and layout, we will send over a contract for you to sign. The contract simply states that both parties have agreed upon the layout and cost. After the contract is signed, we will begin milling your sensory gym. All of the preparatory work is done by our master carpenters, who specialize specifically in sensory gym manufacture and installation. In most cases, the average time from concept to completion is between three days to one week."
         />
         <ProcessCard
           icon={<HiOutlineTruck size="1.5em" />}
           title="Delivery"
-          description="We at Fun Factory deliver your sensory gym to you by ourselves. Nothing shows up in a box, so no need to rummage through any instruction manuals. Depending on your distance from our manufacturing facilities, the trip to you will take no more than a day. Everything is wrapped for quality assurance purposes. If for some unfortunate reason something is damaged, Fun Factory will replace it at no charge to the customer."
+          description="We at Fun Factory deliver your sensory gym to you by ourselves. Nothing shows up in a box, so there is no need to rummage through any instruction manuals. Depending on your distance from our manufacturing facilities, the trip to you will take no more than a day. Everything is wrapped for quality assurance purposes. If for some unfortunate reason, something is damaged, Fun Factory will replace it at no charge to the customer."
         />
         <ProcessCard
           icon={<MdOutlineConstruction size="1.5em" />}

@@ -35,10 +35,17 @@ const Footer = () => {
             <p className="font-semibold">Working Hours</p>
             <p className="font-light">Mon-Fri -8 am to 8 pm EST</p>
             <p className="mt-8 font-light">
-              Sales & Customer service address: 991 US Highway 22, Suite 200,
-              Bridgewater, NJ Manufacturing & Warehouse: 108 Park St, Bear Creek
-              WI 54922 © 2022 Fun Factory Sensory Gym, LLC
+              <span className="font-medium">
+                Sales & Customer service address:
+              </span>{" "}
+              991 US Highway 22, Suite 200, Bridgewater, NJ
+              <br />
+              <span className="font-medium">
+                Manufacturing & Warehouse:
+              </span>{" "}
+              108 Park St, Bear Creek WI 54922
             </p>
+            <p className="mt-4">© 2022 Fun Factory Sensory Gym, LLC</p>
           </div>
           <div className="mt-8 md:mt-0 space-y-4 text-slate-300 font-light md:ml-auto text-sm">
             <p className="text-ffsgPink">Systems</p>
