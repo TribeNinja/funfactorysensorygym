@@ -18,7 +18,7 @@ const TestimonialSection = () => {
           Testimonials
         </h3>
         <h2 className="font-semibold text-3xl md:text-5xl max-w-lg md:leading-normal leading-snug mx-auto">
-          What Our Latest Client Said About Us
+          What Our Client Said About Us
         </h2>
       </div>
       {/* <div className="grid grid-cols-3 md:gap-8 lg:gap-10 mt-12">
