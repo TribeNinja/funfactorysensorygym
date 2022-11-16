@@ -59,9 +59,9 @@ const Hero = () => {
               At Fun Factory Sensory Gym, we design, manufacture, and
               custom-install sensory gyms throughout the United States. From
               learning about your space, the design of your sensory gym, and the
-              3-D rendering of your space - where you can see what your gym
-              would look like at your provided location, to the installation of
-              our custom products, our design specialists will create the most
+              3-D rendering of your space, where you can see what your gym would
+              look like at your provided location, to the installation of our
+              custom products, our design specialists will create the most
               effective and efficient sensory gym for all your needs. At Fun
               Factory Sensory Gym, our mission is to impact the lives of
               children through developmental and therapeutic sensory play. If
