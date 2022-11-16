@@ -71,8 +71,10 @@ const TestimonialNbc = () => {
           <p className="font-light text-gray-500">
             &quot;Fun Factory made this episode the best of our 12 years, Barr
             none the absolute best. It is clear to all in this industry that you
-            are who you are by what and how you do it, we call you the
-            untouchables.&quot;{" "}
+            are who you are by what and how you do it, <br />
+            <span className="italic">
+              we call you the untouchables.
+            </span>&quot;{" "}
             <span className="block font-medium mt-2">
               - Andrew Scerbo Executive Producer NBCUniversal / LXTV
             </span>
