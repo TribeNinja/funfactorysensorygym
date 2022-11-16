@@ -33,7 +33,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 mt-14">
           <div className="col-span-2">
             <p className="font-semibold">Working Hours</p>
-            <p className="font-light">Mon-Fri -8 am to 8 pm EST</p>
+            <p className="font-light">Mon-Fri 8 am to 8 pm EST</p>
             <p className="mt-8 font-light">
               <span className="font-medium">
                 Sales & Customer service address:
