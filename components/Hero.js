@@ -44,7 +44,7 @@ const Hero = () => {
         </div>
         <Link href="/contact">
           <a className="hidden md:flex ml-auto items-center text-white px-8 py-4 bg-ffsgPink rounded-lg space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold">
-            <p>Contact us</p>
+            <p>Free Consultation</p>
             <FiArrowUpRight size="1.3em" />
           </a>
         </Link>

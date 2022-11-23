@@ -63,7 +63,7 @@ const Header = ({ StartFromTop }) => {
             </Link>
             <Link href="/contact">
               <a className="flex items-center text-white px-6 py-3 bg-ffsgPink rounded-lg space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold text-sm">
-                <p>Contact us</p>
+                <p>Free Consultation</p>
                 <FiArrowUpRight size="1.3em" />
               </a>
             </Link>
@@ -99,6 +99,14 @@ const Header = ({ StartFromTop }) => {
           <div className="w-6 md:w-8 lg:w-10 ">
             <img src="/usa-flag.gif" alt="" />
           </div>
+          <div className="md:hidden">
+            <Link href="/contact">
+              <a className="flex items-center text-white px-3 py-2 bg-ffsgPink rounded-lg space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold text-xs">
+                <p>Free Consultation</p>
+                <FiArrowUpRight size="1em" />
+              </a>
+            </Link>
+          </div>
         </div>
         <div className="md:hidden p-2 ml-4 text-lg border border-ffsgPink text-ffsgPink">
           {menuIsOpen ? (
@@ -109,7 +117,7 @@ const Header = ({ StartFromTop }) => {
         </div>
         <Link href="/contact">
           <a className="hidden md:flex ml-6 items-center text-white px-8 py-4 bg-ffsgPink rounded-lg space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold">
-            <p>Contact Us</p>
+            <p>Free Consultation</p>
             <FiArrowUpRight size="1.3em" />
           </a>
         </Link>
