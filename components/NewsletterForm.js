@@ -1,23 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import axios from "axios";
 import { useAlert } from "react-alert";
 
-const NewsletterForm = ({ status, message, onValidated }) => {
+const NewsletterForm = ({}) => {
   const [email, setEmail] = useState("");
   const alert = useAlert();
-
-  useEffect(() => {
-    // status === "sending" && alert.info("Sending...");
-
-    if (status === "error") {
-      alert.error(message);
-      setEmail("");
-    }
-
-    if (status === "success") {
-      alert.success(message);
-      setEmail("");
-    }
-  }, [status, message]);
 
   const handleFormSubmit = () => {
     if (
@@ -29,11 +16,23 @@ const NewsletterForm = ({ status, message, onValidated }) => {
     ) {
       return alert.info("Please enter a valid email address!");
     }
-
-    const isFormValidated = onValidated({ EMAIL: email });
-
     // On success return true
-    return email && email.indexOf("@") > -1 && isFormValidated;
+    axios
+      .post("/api/subscribe", {
+        email,
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .then((res) => {
+        if (res?.data.status === "success") {
+          alert.success("Subscribed!");
+        } else {
+          alert.error("Something went wrong!");
+        }
+      });
+
+    setEmail("");
   };
 
   return (
