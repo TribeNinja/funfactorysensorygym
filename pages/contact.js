@@ -39,6 +39,7 @@ const Contact = () => {
     ) {
       return alert.info("Please enter a valid email address!");
     }
+    alert.info("Sending...");
     axios
       .post("/api/success", {
         firstName,
@@ -55,7 +56,9 @@ const Contact = () => {
       })
       .then((res) => {
         if (res?.data.status === "success") {
-          alert.success("Sent Successfully!");
+          alert.success(
+            "Your form was successfully submitted. We will get back to you soon!"
+          );
         } else {
           alert.error("Something went wrong!");
         }

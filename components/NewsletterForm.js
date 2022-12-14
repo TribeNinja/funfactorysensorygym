@@ -17,6 +17,7 @@ const NewsletterForm = ({}) => {
       return alert.info("Please enter a valid email address!");
     }
     // On success return true
+    alert.info("Subscribing...");
     axios
       .post("/api/subscribe", {
         email,
@@ -26,7 +27,9 @@ const NewsletterForm = ({}) => {
       })
       .then((res) => {
         if (res?.data.status === "success") {
-          alert.success("Subscribed!");
+          alert.success(
+            "Thank you for signing up for our newsletter. You'll be the first to know about our latest news and updates!"
+          );
         } else {
           alert.error("Something went wrong!");
         }
