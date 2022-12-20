@@ -37,7 +37,7 @@ const TestimonialNbc = () => {
     setIsOpen(false);
   }
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 px-6 md:px-14 my-24 md:my-40">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-8 px-6 md:px-14 my-24 md:my-40">
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -65,7 +65,7 @@ const TestimonialNbc = () => {
           <p className="uppercase text-gray-500 font-medium text-base md:text-lg">
             As seen on NBC show &quot;George to the rescue&quot;
           </p>
-          <h2 className="font-semibold text-3xl md:text-5xl max-w-lg md:leading-normal leading-snug">
+          <h2 className="font-semibold text-3xl md:text-4xl lg:text-5xl max-w-lg md:leading-normal lg:leading-normal leading-snug">
             Recommended By Everyone
           </h2>
           <p className="font-light text-gray-500">

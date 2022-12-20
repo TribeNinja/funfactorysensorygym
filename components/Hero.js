@@ -49,10 +49,10 @@ const Hero = () => {
           </a>
         </Link>
       </header>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
-        <div className="mt-40 md:mt-36 lg:mt-40 items-center px-6 md:px-14">
-          <div className="space-y-6 md:space-y-8 max-w-lg">
-            <h2 className="font-semibold text-3xl md:text-5xl md:leading-normal leading-snug text-center md:text-left">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0">
+        <div className="mt-40 lg:mt-36 xl:mt-40 items-center px-6 lg:px-14">
+          <div className="space-y-6 lg:space-y-8 xl:max-w-lg">
+            <h2 className="font-semibold text-3xl lg:text-5xl lg:leading-normal leading-snug text-center lg:text-left">
               One Gym, Unlimited Possibilities
             </h2>
             <p className="leading-relaxed">
@@ -132,7 +132,7 @@ const Hero = () => {
             /> */}
           </Slider>
 
-          <div className="md:hidden absolute bottom-5 left-0 right-0 mx-5 mt-14">
+          <div className="lg:hidden absolute bottom-5 left-0 right-0 mx-5 mt-14">
             <div className="flex items-center justify-between px-6 py-4 bg-white">
               <div className="flex items-center space-x-4">
                 <div>

@@ -15,35 +15,9 @@ import { useState, useEffect } from "react";
 const Index = ({ commercials, homes }) => {
   const [rehydration, setRehydration] = useState(false);
 
-  let pageId = 111131050739842;
-  let appId = 735141727539744;
-
   useEffect(() => {
     setRehydration(true);
   }, [rehydration]);
-
-  useEffect(() => {
-    var chatbox = document.getElementById("fb-customer-chat");
-    chatbox?.setAttribute("page_id", "111131050739842");
-    chatbox?.setAttribute("attribution", "biz_inbox");
-
-    window.fbAsyncInit = function () {
-      FB.init({
-        xfbml: true,
-        version: "v15.0",
-      });
-    };
-
-    (function (d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    })(document, "script", "facebook-jssdk");
-  }, []);
 
   if (!rehydration) {
     return null;
@@ -84,9 +58,11 @@ const Index = ({ commercials, homes }) => {
           <AboutSection />
           <Cta />
         </div>
-        {/* <MessengerCustomerChat pageId={pageId} appId={appId} /> */}
 
-        <div id="fb-customer-chat" className="fb-customerchat"></div>
+        <MessengerCustomerChat
+          pageId={process.env.NEXT_PUBLIC_FACEBOOK_PAGE_ID}
+          appId={process.env.NEXT_PUBLIC_FACEBOOK_APP_ID}
+        />
 
         <Footer />
       </div>

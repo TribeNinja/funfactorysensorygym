@@ -95,8 +95,8 @@ const Header = ({ StartFromTop }) => {
           </Link>
         </div>
         <div className="flex items-center space-x-2 font-medium md:font-semibold ml-auto">
-          <p className="text-[#000054] text-xs md:text-base ml-2">
-            Made in USAs
+          <p className="text-[#000054] text-xs md:text-base ml-2 md:ml-6">
+            Made in USA
           </p>
           <div className="w-6 md:w-8 lg:w-10 ">
             <img src="/usa-flag.gif" alt="" />
@@ -118,7 +118,7 @@ const Header = ({ StartFromTop }) => {
           )}
         </div>
         <Link href="/contact">
-          <a className="hidden md:flex ml-6 items-center text-white px-8 py-4 bg-ffsgPink rounded-lg space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold">
+          <a className="hidden md:flex ml-6 items-center text-white px-4 py-3 lg:px-8 lg:py-4 bg-ffsgPink rounded-lg space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold">
             <p>Free Consultation</p>
             <FiArrowUpRight size="1.3em" />
           </a>

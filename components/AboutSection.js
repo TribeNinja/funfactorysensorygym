@@ -81,7 +81,7 @@ const AboutSection = () => {
           </Link>
         </div>
 
-        <div className="hidden w-full md:inline-block py-6 px-8 rounded-lg bg-ffsgLightPink mt-14">
+        <div className="hidden w-full lg:inline-block py-6 px-8 rounded-lg bg-ffsgLightPink mt-14">
           <div className="flex items-center w-full justify-between">
             <div className="flex items-center space-x-4">
               <div className="text-white p-3 bg-ffsgPink inline-block rounded-full">
