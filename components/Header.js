@@ -94,11 +94,11 @@ const Header = ({ StartFromTop }) => {
             </a>
           </Link>
         </div>
-        <div className="flex items-center space-x-2 font-medium md:font-semibold ml-auto">
-          <p className="text-[#000054] text-xs md:text-base ml-2 md:ml-6">
+        <div className="flex items-center space-x-2 font-semibold ml-auto">
+          <p className="text-[#000054] text-xs md:text-base ml-3 md:ml-6 text-center">
             Made in USA
           </p>
-          <div className="w-6 md:w-8 lg:w-10 ">
+          <div className="w-10 ">
             <img src="/usa-flag.gif" alt="" />
           </div>
           <div className="md:hidden">
@@ -110,7 +110,7 @@ const Header = ({ StartFromTop }) => {
             </Link>
           </div>
         </div>
-        <div className="md:hidden p-2 ml-4 text-lg border border-ffsgPink text-ffsgPink">
+        <div className="md:hidden p-2 ml-3 text-lg border border-ffsgPink text-ffsgPink">
           {menuIsOpen ? (
             <FiMenu onClick={() => setMenuIsOpen(false)} />
           ) : (
