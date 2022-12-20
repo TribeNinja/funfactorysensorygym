@@ -9,7 +9,6 @@ import Footer from "components/Footer";
 import Header from "components/Header";
 import { sanityClient } from "sanity";
 import TestimonialNbc from "components/TestimonialNbc";
-import MessengerCustomerChat from "react-messenger-customer-chat/lib/MessengerCustomerChat";
 import { useState, useEffect } from "react";
 
 const Index = ({ commercials, homes }) => {
@@ -77,11 +76,6 @@ const Index = ({ commercials, homes }) => {
           <AboutSection />
           <Cta />
         </div>
-
-        {/* <MessengerCustomerChat
-          pageId={process.env.NEXT_PUBLIC_FACEBOOK_PAGE_ID}
-          appId={process.env.NEXT_PUBLIC_FACEBOOK_APP_ID}
-        /> */}
 
         <div
           id="fb-customer-chat"
