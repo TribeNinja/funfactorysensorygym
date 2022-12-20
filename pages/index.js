@@ -17,11 +17,9 @@ const Index = ({ commercials, homes }) => {
 
   useEffect(() => {
     setRehydration(true);
+  }, [rehydration]);
 
-    var chatbox = document.getElementById("fb-customer-chat");
-    chatbox?.setAttribute("page_id", process.env.NEXT_PUBLIC_FACEBOOK_PAGE_ID);
-    chatbox?.setAttribute("attribution", "biz_inbox");
-
+  useEffect(() => {
     window.fbAsyncInit = function () {
       FB.init({
         xfbml: true,
@@ -85,7 +83,12 @@ const Index = ({ commercials, homes }) => {
           appId={process.env.NEXT_PUBLIC_FACEBOOK_APP_ID}
         /> */}
 
-        <div id="fb-customer-chat" className="fb-customerchat"></div>
+        <div
+          id="fb-customer-chat"
+          className="fb-customerchat"
+          page_id={process.env.NEXT_PUBLIC_FACEBOOK_PAGE_ID}
+          attribution="biz_inbox"
+        />
 
         <Footer />
       </div>
