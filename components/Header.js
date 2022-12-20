@@ -95,7 +95,9 @@ const Header = ({ StartFromTop }) => {
           </Link>
         </div>
         <div className="flex items-center space-x-2 font-medium md:font-semibold ml-auto">
-          <p className="text-[#000054]">Made in USA</p>
+          <p className="text-[#000054] text-xs md:text-base ml-2">
+            Made in USAs
+          </p>
           <div className="w-6 md:w-8 lg:w-10 ">
             <img src="/usa-flag.gif" alt="" />
           </div>

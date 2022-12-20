@@ -100,7 +100,7 @@ const AboutSection = () => {
                     )}
                   </VisibilitySensor>
                 </div>
-                <p>Children</p>
+                <p>Children Helped</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">

@@ -148,7 +148,7 @@ const Hero = () => {
                       )}
                     </VisibilitySensor>
                   </div>
-                  <p className="text-sm">Children</p>
+                  <p className="text-sm">Children Helped</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
