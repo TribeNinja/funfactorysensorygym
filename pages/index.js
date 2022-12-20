@@ -17,6 +17,27 @@ const Index = ({ commercials, homes }) => {
 
   useEffect(() => {
     setRehydration(true);
+
+    var chatbox = document.getElementById("fb-customer-chat");
+    chatbox?.setAttribute("page_id", process.env.NEXT_PUBLIC_FACEBOOK_PAGE_ID);
+    chatbox?.setAttribute("attribution", "biz_inbox");
+
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: "v15.0",
+      });
+    };
+
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
   }, [rehydration]);
 
   if (!rehydration) {
@@ -59,10 +80,12 @@ const Index = ({ commercials, homes }) => {
           <Cta />
         </div>
 
-        <MessengerCustomerChat
+        {/* <MessengerCustomerChat
           pageId={process.env.NEXT_PUBLIC_FACEBOOK_PAGE_ID}
           appId={process.env.NEXT_PUBLIC_FACEBOOK_APP_ID}
-        />
+        /> */}
+
+        <div id="fb-customer-chat" className="fb-customerchat"></div>
 
         <Footer />
       </div>
