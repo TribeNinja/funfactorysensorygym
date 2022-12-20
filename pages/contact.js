@@ -81,7 +81,7 @@ const Contact = () => {
 
       <Header StartFromTop={true} />
 
-      <div className="mt-28 md:mt-48 max-w-7xl mx-auto">
+      <div className="mt-44 md:mt-48 max-w-7xl mx-auto">
         <div className="text-center mt-10 mx-6 max-w-3xl md:mx-auto">
           <h1 className="text-3xl font-bold leading-snug uppercase max-w-2xl mx-auto">
             Leave it to the sensory gym professionals.
