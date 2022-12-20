@@ -86,7 +86,7 @@ const Index = ({ commercials, homes }) => {
         </div>
         {/* <MessengerCustomerChat pageId={pageId} appId={appId} /> */}
 
-        <div id="fb-customer-chat" class="fb-customerchat"></div>
+        <div id="fb-customer-chat" className="fb-customerchat"></div>
 
         <Footer />
       </div>
