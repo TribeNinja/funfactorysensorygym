@@ -50,6 +50,10 @@ const Index = ({ commercials, homes }) => {
             name="description"
             content="Fun Factory offers custom commercial sensory gyms to help children develop their motor skills. Our team custom designs and installs sensory gyms in the US."
           ></meta>
+          <meta
+            name="facebook-domain-verification"
+            content="lio2552an3ll0mhz2wzhgioinv0c9s"
+          />
         </Head>
         <Header />
         <div className="max-w-7xl mx-auto">
