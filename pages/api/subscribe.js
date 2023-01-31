@@ -5,8 +5,10 @@ const path = require("path");
 export default async (req, res) => {
   const { email } = req.body;
 
+  const projectRoot = path.resolve(process.cwd());
+
   let html = fs.readFileSync(
-    path.join(__dirname, "../../../../html/newsletter.html"),
+    path.join(projectRoot, "html/newsletter.html"),
     "utf8"
   );
 
