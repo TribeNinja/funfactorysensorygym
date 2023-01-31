@@ -1,5 +1,6 @@
 const nodemailer = require("nodemailer");
 const fs = require("fs");
+const path = require("path");
 
 export default async (req, res) => {
   const { senderEmail, recipientEmail, orderId, date, title, price, image } =
