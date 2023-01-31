@@ -12,7 +12,7 @@ export default async (req, res) => {
     image,
   } = req.body;
 
-  let html = fs.readFileSync("html/giftCode.html", "utf8");
+  let html = fs.readFileSync("./public/html/giftCode.html", "utf8");
 
   html = html.replace("{{recipientName}}", recipientName);
   html = html.replace("{{code}}", code);
