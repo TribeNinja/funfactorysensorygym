@@ -281,7 +281,7 @@ const GiftcardDetails = ({ giftcards }) => {
               <div className="flex justify-center my-20">
                 <svg
                   aria-hidden="true"
-                  class="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-200 fill-ffsgPink"
+                  className="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-200 fill-ffsgPink"
                   viewBox="0 0 100 101"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -295,7 +295,7 @@ const GiftcardDetails = ({ giftcards }) => {
                     fill="currentFill"
                   />
                 </svg>
-                <span class="sr-only">Loading...</span>
+                <span className="sr-only">Loading...</span>
               </div>
             )}
 
