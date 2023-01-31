@@ -4,7 +4,7 @@ const fs = require("fs");
 export default async (req, res) => {
   const { email } = req.body;
 
-  let html = fs.readFileSync("./html/newsletter.html", "utf8");
+  let html = fs.readFile("./html/newsletter.html", "utf8");
 
   html = html.replace("{{email}}", email);
 
