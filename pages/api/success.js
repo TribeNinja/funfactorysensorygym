@@ -13,8 +13,16 @@ export default async (req, res) => {
     selectedSystem,
   } = req.body;
 
-  let userHTML = fs.readFileSync("../../html/contactUsUser.html", "utf8");
-  let ownerHTML = fs.readFileSync("../../html/contactUsOwner.html", "utf8");
+  const projectRoot = path.resolve(process.cwd());
+
+  let userHTML = fs.readFileSync(
+    path.join(projectRoot, "html/contactUsUser.html"),
+    "utf8"
+  );
+  let ownerHTML = fs.readFileSync(
+    path.join(projectRoot, "html/contactUsOwner.html"),
+    "utf8"
+  );
 
   userHTML = userHTML.replace("{{firstName}}", firstName);
   userHTML = userHTML.replace("{{lastName}}", lastName);

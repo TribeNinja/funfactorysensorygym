@@ -5,7 +5,11 @@ export default async (req, res) => {
   const { senderEmail, recipientEmail, orderId, date, title, price, image } =
     req.body;
 
-  let html = fs.readFileSync("./public/html/successOrder.html", "utf8");
+  const projectRoot = path.resolve(process.cwd());
+  let html = fs.readFileSync(
+    path.join(projectRoot, "html/successOrder.html"),
+    "utf8"
+  );
 
   html = html.replace("{{recipientEmail}}", recipientEmail);
   html = html.replace("{{orderId}}", orderId);
