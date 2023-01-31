@@ -19,7 +19,7 @@ const GiftCards = () => {
             Gift Cards
           </p>
           <h2 className="font-semibold text-3xl md:text-5xl max-w-lg md:leading-normal leading-snug">
-            FFSG Gift Cards
+            Fun Factory Gift Cards
           </h2>
           <div>
             <p className="text-gray-500 font-light">
