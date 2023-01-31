@@ -1,4 +1,5 @@
 const nodemailer = require("nodemailer");
+const fs = require("fs");
 
 export default async (req, res) => {
   const {
@@ -12,6 +13,20 @@ export default async (req, res) => {
     selectedSystem,
   } = req.body;
 
+  let userHTML = fs.readFileSync("html/contactUsUser.html", "utf8");
+  let ownerHTML = fs.readFileSync("html/contactUsOwner.html", "utf8");
+
+  userHTML = userHTML.replace("{{firstName}}", firstName);
+  userHTML = userHTML.replace("{{lastName}}", lastName);
+  ownerHTML = ownerHTML.replace("{{firstName}}", firstName);
+  ownerHTML = ownerHTML.replace("{{lastName}}", lastName);
+  ownerHTML = ownerHTML.replace("{{email}}", email);
+  ownerHTML = ownerHTML.replace("{{phone}}", phone);
+  ownerHTML = ownerHTML.replace("{{city}}", city);
+  ownerHTML = ownerHTML.replace("{{state}}", state);
+  ownerHTML = ownerHTML.replace("{{system}}", selectedSystem);
+  ownerHTML = ownerHTML.replace("{{message}}", message);
+
   let transporter = nodemailer.createTransport({
     host: process.env.EMAIL_SERVER_HOST,
     port: process.env.EMAIL_SERVER_PORT,
@@ -22,30 +37,33 @@ export default async (req, res) => {
     },
   });
 
-  transporter
-    .sendMail({
-      from: process.env.EMAIL_SERVER_USER, // sender address
-      to: process.env.EMAIL_TO_BE_SENT_TO,
-      subject: "Fun Factory Sensory Gym website inquiry form", // Subject line
-      html: `
-    <p>First Name: ${firstName}</p>
-    <p>Last Name: ${lastName}</p>
-    <p>Email: ${email}</p>
-    <p>Phone: ${phone}</p>
-    <p>City: ${city}</p>
-    <p>State: ${state}</p><p>System: ${selectedSystem}</p>
-    <p>Message: ${message}</p>
-    
-    `, // html body
-    })
-    .catch((err) => {
-      res.status(400).json({ status: "fail" });
-    })
-    .then((result) => {
-      if (result) {
-        res.status(200).json({ status: "success" });
-      } else {
-        res.status(200).json({ status: "fail" });
-      }
-    });
+  // Define the email options
+  let toOwnerMailOptions = {
+    from: process.env.EMAIL_SERVER_USER, // sender address
+    to: process.env.EMAIL_TO_BE_SENT_TO,
+    subject: "Fun Factory Sensory Gym website inquiry form", // Subject line
+    html: ownerHTML,
+  };
+
+  let toUserMailOptions = {
+    from: process.env.EMAIL_SERVER_USER, // sender address
+    to: email,
+    subject: "Fun Factory Sensory Gym website inquiry form", // Subject line
+    html: userHTML, // html body
+  };
+
+  // Send the email
+  transporter.sendMail(toOwnerMailOptions, (error, info) => {
+    if (error) {
+      return res.status(400).json({ status: "fail" });
+    }
+    res.status(200).json({ status: "success" });
+  });
+
+  transporter.sendMail(toUserMailOptions, (error, info) => {
+    if (error) {
+      return res.status(400).json({ status: "fail" });
+    }
+    res.status(200).json({ status: "success" });
+  });
 };

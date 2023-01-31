@@ -27,9 +27,7 @@ const NewsletterForm = ({}) => {
       })
       .then((res) => {
         if (res?.data.status === "success") {
-          alert.success(
-            "Thank you for signing up for our newsletter. You'll be the first to know about our latest news and updates!"
-          );
+          alert.success("Subscribed!");
         } else {
           alert.error("Something went wrong!");
         }

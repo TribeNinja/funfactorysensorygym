@@ -65,7 +65,7 @@ const Gallery = ({ systems, type, short, title, description }) => {
         </div>
         <div className="hidden md:block ml-auto">
           <Link href={`/systems?sys=${type}`}>
-            <a className="text-white px-8 py-4 bg-ffsgPink rounded-lg flex space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold">
+            <a className="text-white px-6 py-3 bg-ffsgPink rounded-xl flex space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold">
               <p>Show All Projects</p>
               <FiArrowUpRight size="1.3em" />
             </a>
@@ -185,7 +185,7 @@ const Gallery = ({ systems, type, short, title, description }) => {
           </div>
           <div className="md:hidden mx-auto mt-8">
             <Link href={`/systems?sys=${type}`}>
-              <a className="text-white px-6 py-3 bg-ffsgPink rounded-lg flex space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold text-sm">
+              <a className="text-white px-6 py-3 bg-ffsgPink rounded-xl flex space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold text-sm">
                 <p>Show All projects</p>
                 <FiArrowUpRight size="1.3em" />
               </a>

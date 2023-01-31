@@ -148,7 +148,7 @@ function blog({ blogs }) {
 export default blog;
 
 export const getServerSideProps = async () => {
-  const queryBlogs = `*[_type == 'blog'] | order(publishedAt desc) {
+  const queryBlogs = `*[_type == 'blog'] | order(_updatedAt desc) {
     _id,
     title,
     gallery,

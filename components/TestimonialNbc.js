@@ -82,7 +82,7 @@ const TestimonialNbc = () => {
         </div>
         <div
           onClick={openModal}
-          className="text-white mt-10 px-6 md:px-8 py-3 md:py-4 bg-ffsgPink rounded-lg inline-block cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-medium text-sm md:text-base"
+          className="text-white mt-10 px-6 py-3 bg-ffsgPink rounded-xl inline-block cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-medium text-sm md:text-base"
         >
           <div className="flex items-center space-x-2">
             <HiPlay className="text-2xl" />

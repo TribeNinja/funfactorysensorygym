@@ -76,7 +76,7 @@ const Contact = () => {
   return (
     <div>
       <Head>
-        <title>Contact</title>
+        <title>Contact | Fun Factory Sensory Gym</title>
       </Head>
 
       <Header StartFromTop={true} />

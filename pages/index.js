@@ -10,6 +10,7 @@ import Header from "components/Header";
 import { sanityClient } from "sanity";
 import TestimonialNbc from "components/TestimonialNbc";
 import { useState, useEffect } from "react";
+import GiftcardsSection from "components/GiftcardsSection";
 
 const Index = ({ commercials, homes }) => {
   const [rehydration, setRehydration] = useState(false);
@@ -46,9 +47,14 @@ const Index = ({ commercials, homes }) => {
           <title>
             Custom Sensory Gym | Commercial Sensory Gyms | Home Sensory Gym
           </title>
+          <link
+            rel="canonical"
+            href="https://www.funfactorysensorygyms.com/"
+            key="canonical"
+          />
           <meta
             name="description"
-            content="Fun Factory offers custom commercial sensory gyms to help children develop their motor skills. Our team custom designs and installs sensory gyms in the US."
+            content="Design your dream sensory gym with Fun Factory, the leading manufacturer of custom equipment in North America. Our team handles design, development, and installation for a unique, tailored experience."
           ></meta>
           <meta
             name="facebook-domain-verification"
@@ -78,6 +84,7 @@ const Index = ({ commercials, homes }) => {
         <div className="max-w-7xl mx-auto">
           <ProcessSection />
           <AboutSection />
+          <GiftcardsSection />
           <Cta />
         </div>
 
@@ -97,7 +104,7 @@ const Index = ({ commercials, homes }) => {
 export default Index;
 
 export const getServerSideProps = async () => {
-  const queryCommercial = `*[_type == 'commercial'] | order(_createdAt desc)[0..3] {
+  const queryCommercial = `*[_type == 'commercial'] | order(_updatedAt desc)[0..3] {
     _id,
     title,
     gallery,
@@ -105,7 +112,7 @@ export const getServerSideProps = async () => {
     tags[]->
   }
   `;
-  const queryHome = `*[_type == 'home'] | order(_createdAt desc)[0..3] {
+  const queryHome = `*[_type == 'home'] | order(_updatedAt desc)[0..3] {
     _id,
     title,
     gallery,

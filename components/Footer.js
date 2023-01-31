@@ -24,7 +24,7 @@ const Footer = () => {
             </p>
             <div
               onClick={() => router.push("/contact")}
-              className="ml-auto items-center px-6 py-3 md:px-8 md:py-4 bg-ffsgPink rounded-lg flex space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink text-sm md:text-base font-medium"
+              className="ml-auto items-center px-6 py-3 bg-ffsgPink rounded-xl flex space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink text-sm md:text-base font-medium"
             >
               <p>Free Consultation</p>
             </div>
@@ -48,7 +48,7 @@ const Footer = () => {
             <p className="mt-4">© 2022 Fun Factory Sensory Gym, LLC</p>
           </div>
           <div className="mt-8 md:mt-0 space-y-4 text-slate-300 font-light md:ml-auto text-sm">
-            <p className="text-ffsgPink">Systems</p>
+            <p className="text-ffsgPink font-semibold">Systems</p>
             <div className="hover:cursor-pointer hover:underline">
               <Link href="/systems?sys=all">
                 <a>
@@ -72,7 +72,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="mt-8 md:mt-0 space-y-4 text-slate-300 font-light md:ml-auto text-sm">
-            <p className="text-ffsgPink">About</p>
+            <p className="text-ffsgPink font-semibold">About</p>
             <div className="hover:cursor-pointer hover:underline">
               <Link href="/#about">
                 <a>

@@ -23,7 +23,7 @@ const Commercial = ({ commercial, commercialsGallery }) => {
 export default Commercial;
 
 export const getServerSideProps = async ({ params }) => {
-  const queryCommercialGallery = `*[_type == 'commercial' && !(slug.current == $slug)][0..2] {
+  const queryCommercialGallery = `*[_type == 'commercial' && !(slug.current == $slug)] | order(_updatedAt desc) [0..2] {
     _type,
     _id,
     title,

@@ -1,9 +1,9 @@
-import { RiPsychotherapyLine } from "react-icons/ri";
+import { SiHomeassistant } from "react-icons/si";
 
 export default {
   name: "categories",
   title: "Home categories",
-  icon: RiPsychotherapyLine,
+  icon: SiHomeassistant,
   type: "document",
   fields: [
     {

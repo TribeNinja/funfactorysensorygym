@@ -17,7 +17,6 @@ const Systems = ({ tags, categories, all, commercials, homes }) => {
   const route = useRouter();
 
   const [readMore1, setReadMore1] = useState(false);
-  const [readMore2, setReadMore2] = useState(false);
 
   useEffect(() => {
     let items = [];
@@ -307,7 +306,7 @@ export const getServerSideProps = async () => {
     title,
   }
   `;
-  const queryAll = `*[_type in ['commercial', 'home']] | order(publishedAt desc) {
+  const queryAll = `*[_type in ['commercial', 'home']] | order(_updatedAt desc) {
     _type,
     _id,
     title,
@@ -318,7 +317,7 @@ export const getServerSideProps = async () => {
     tags[]->
   }
   `;
-  const queryCommercial = `*[_type == 'commercial'] | order(publishedAt desc) {
+  const queryCommercial = `*[_type == 'commercial'] | order(_updatedAt desc) {
     _type,
     _id,
     title,
@@ -328,7 +327,7 @@ export const getServerSideProps = async () => {
     tags[]->
   }
   `;
-  const queryHome = `*[_type == 'home'] | order(publishedAt desc)  {
+  const queryHome = `*[_type == 'home'] | order(_updatedAt desc)  {
     _type,
     _id,
     title,

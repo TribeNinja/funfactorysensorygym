@@ -20,7 +20,7 @@ const AboutSection = () => {
           src="/aboutusimage.png"
         />
       </div>
-      <div>
+      <div className="my-auto">
         <div className="space-y-5">
           <p className="uppercase text-gray-500 font-medium text-lg">
             About Us
@@ -75,7 +75,7 @@ const AboutSection = () => {
           </div>
 
           <Link href="/contact">
-            <a className="text-white px-6 py-3 md:px-8 md:py-4 bg-ffsgPink rounded-lg inline-block cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold text-sm md:text-base">
+            <a className="text-white px-8 py-3 bg-ffsgPink rounded-xl inline-block cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold text-sm md:text-base">
               <p>Contact Us</p>
             </a>
           </Link>

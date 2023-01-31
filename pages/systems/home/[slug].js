@@ -23,7 +23,7 @@ const Home = ({ home, homesGallery }) => {
 export default Home;
 
 export const getServerSideProps = async ({ params }) => {
-  const queryHomeGallery = `*[_type == 'home' && !(slug.current == $slug)][0..2] {
+  const queryHomeGallery = `*[_type == 'home' && !(slug.current == $slug)] | order(_updatedAt desc) [0..2] {
     _type,
     _id,
     title,

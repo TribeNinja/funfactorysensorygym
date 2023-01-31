@@ -1,5 +1,6 @@
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { FiArrowUpRight } from "react-icons/fi";
+import { AiTwotonePhone } from "react-icons/ai";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import Slider from "react-slick";
@@ -17,8 +18,8 @@ const Hero = () => {
   };
   return (
     <div>
-      <header className="hidden md:grid grid-cols-2 py-4 px-6 md:px-14 z-10 items-center absolute max-w-7xl w-full">
-        <div className="flex space-x-10 items-center">
+      <header className="hidden md:grid grid-cols-2 py-4 px-6 md:px-14 z-10 items-center absolute max-w-7xl w-full font-medium">
+        <div className="flex space-x-8 items-center">
           <Link href="/">
             <a className="w-20 md:w-24 lg:w-32 cursor-pointer">
               <img src="/logo2.png" alt="" />
@@ -41,13 +42,26 @@ const Hero = () => {
               <span className="nav-link">Blog</span>
             </a>
           </Link>
+          <Link href="/giftcards">
+            <a className="relative nav hover:text-ffsgPink cursor-pointer transition-all duration-200">
+              <span className="nav-link">Gift Cards</span>
+            </a>
+          </Link>
         </div>
-        <Link href="/contact">
-          <a className="hidden md:flex ml-auto items-center text-white px-8 py-4 bg-ffsgPink rounded-lg space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold">
-            <p>Free Consultation</p>
-            <FiArrowUpRight size="1.3em" />
-          </a>
-        </Link>
+        <div className="flex space-x-3">
+          <Link href="/contact">
+            <a className="hidden md:flex ml-auto items-center text-white px-6 py-3 bg-ffsgPink rounded-xl space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 ring-2 ring-pink-900 font-semibold">
+              <p>Free Consultation</p>
+              <FiArrowUpRight size="1.2em" />
+            </a>
+          </Link>
+          <Link href="tel:+18334620769">
+            <a className="hidden md:flex ml-auto items-center text-white px-6 py-3 bg-green-500 rounded-xl space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 ring-2 hover:ring-ffsgPink ring-green-800  font-semibold">
+              <AiTwotonePhone size="1.3em" />
+              <p>+1 (833) 462-0769</p>
+            </a>
+          </Link>
+        </div>
       </header>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0">
         <div className="mt-40 lg:mt-36 xl:mt-40 items-center px-6 lg:px-14">
@@ -83,7 +97,7 @@ const Hero = () => {
 
           <div className="flex items-center space-x-5 mt-10 lg:mt-16">
             <Link href="/contact">
-              <a className="px-6 py-3 md:px-8 md:py-4 text-sm md:text-base bg-ffsgPink text-white rounded-lg flex items-center space-x-2 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold">
+              <a className="px-6 py-3 md:py-4 text-sm md:text-base bg-ffsgPink text-white rounded-xl flex items-center space-x-2 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold">
                 <p>Free Consultation</p>
                 <HiArrowNarrowRight size="1.3em" />
               </a>

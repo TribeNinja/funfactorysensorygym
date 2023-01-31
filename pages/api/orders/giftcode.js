@@ -2,11 +2,26 @@ const nodemailer = require("nodemailer");
 const fs = require("fs");
 
 export default async (req, res) => {
-  const { email } = req.body;
+  const {
+    recipientEmail,
+    senderName,
+    recipientName,
+    message,
+    code,
+    price,
+    image,
+  } = req.body;
 
-  let html = fs.readFileSync("html/newsletter.html", "utf8");
+  let html = fs.readFileSync("html/giftCode.html", "utf8");
 
-  html = html.replace("{{email}}", email);
+  html = html.replace("{{recipientName}}", recipientName);
+  html = html.replace("{{code}}", code);
+  html = html.replace("{{price}}", price);
+  html = html.replace("{{image}}", image);
+  html = html.replace("{{message}}", message);
+  while (html.indexOf("{{senderName}}") !== -1) {
+    html = html.replace("{{senderName}}", senderName);
+  }
 
   let transporter = nodemailer.createTransport({
     host: process.env.EMAIL_SERVER_HOST,
@@ -20,9 +35,9 @@ export default async (req, res) => {
 
   let mailOptions = {
     from: process.env.EMAIL_SERVER_USER, // sender address
-    to: email,
+    to: recipientEmail,
     bcc: process.env.EMAIL_TO_BE_SENT_TO,
-    subject: "Thank you for subscribing!", // Subject line
+    subject: "You've received a Fun Factory Sensory Gym Gift Card!", // Subject line
     html: html, // html body
   };
 

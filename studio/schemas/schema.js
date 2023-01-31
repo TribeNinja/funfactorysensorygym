@@ -12,6 +12,10 @@ import commercial from "./commercial";
 import home from "./home";
 import youtube from "./youtube";
 import blog from "./blog";
+import giftcard from "./giftcard";
+import giftcardOrders from "./giftcardOrders";
+import paymentResult from "./paymentResult";
+import deliveryDetails from "./deliveryDetails";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -27,6 +31,10 @@ export default createSchema({
     commercial,
     home,
     blog,
+    giftcard,
+    giftcardOrders,
+    paymentResult,
+    deliveryDetails,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,

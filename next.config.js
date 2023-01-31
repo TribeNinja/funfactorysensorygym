@@ -8,17 +8,11 @@ const STUDIO_REWRITE = {
 
 module.exports = {
   reactStrictMode: true,
-
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
   rewrites: () => [STUDIO_REWRITE],
-  // async rewrites() {
-  //   return [
-  //     {
-  //       source: "/",
-  //       destination:
-  //         "https://www.facebook.com/plugins/customer_chat/SDK/:path*",
-  //     },
-  //   ];
-  // },
   images: {
     domains: ["cdn.sanity.io"],
   },
