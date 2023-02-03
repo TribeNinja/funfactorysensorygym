@@ -1,9 +1,22 @@
 const nodemailer = require("nodemailer");
 const fs = require("fs");
 const path = require("path");
+const axios = require("axios");
+
+async function postToWebhook(webhookURL, data) {
+  try {
+    const response = await axios.post(webhookURL, data);
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 export default async (req, res) => {
   const { email } = req.body;
+
+  postToWebhook(process.env.ZAPIER_NEWSLETTER, {
+    email,
+  });
 
   const projectRoot = path.resolve(process.cwd());
 
