@@ -18,6 +18,11 @@ const NewsletterForm = ({}) => {
     }
     // On success return true
     alert.info("Subscribing...");
+
+    axios.post(process.env.ZAPIER_NEWSLETTER, {
+      email,
+    });
+
     axios
       .post("/api/subscribe", {
         email,
