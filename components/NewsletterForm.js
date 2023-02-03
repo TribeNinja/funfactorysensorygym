@@ -19,7 +19,7 @@ const NewsletterForm = ({}) => {
     // On success return true
     alert.info("Subscribing...");
 
-    axios.post(process.env.ZAPIER_NEWSLETTER, {
+    axios.post(process.env.NEXT_PUBLIC_ZAPIER_NEWSLETTER, {
       email,
     });
 
