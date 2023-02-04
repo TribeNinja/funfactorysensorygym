@@ -38,7 +38,7 @@ const Header = ({ StartFromTop }) => {
       <div className="flex items-center justify-center p-2 px-3 md:p-3 bg-[#0db14b] text-white">
         <RiChatHeartFill className="text-3xl md:text-2xl mr-2 animate-pulse" />
         <p className="text-xs md:text-base">
-          *Proceeds from each purchase of a Fun Factory Sensory Gym installation
+          Proceeds from each purchase of a Fun Factory Sensory Gym installation
           help families with special needs children.
         </p>
       </div>
