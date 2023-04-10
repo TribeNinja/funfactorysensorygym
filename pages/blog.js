@@ -39,7 +39,7 @@ function blog({ blogs }) {
           <div className="space-y-16">
             {blogs.map((blog, i) => (
               <div
-                className="grid grid-cols-1 md:grid-cols-7 gap-20 items-center"
+                className="grid grid-cols-1 md:grid-cols-7 gap-10 items-center"
                 key={blog._id}
               >
                 <div
@@ -63,9 +63,9 @@ function blog({ blogs }) {
                         <Slider {...settings}>
                           {blog.gallery.map((image) => (
                             <Image
-                              height="270"
+                              height="400"
                               width="400"
-                              objectFit="cover"
+                              objectFit="contain"
                               key={blog._id}
                               className="hover:scale-125 transition-all duration-200"
                               src={urlFor(image).url()}
@@ -82,14 +82,17 @@ function blog({ blogs }) {
                     </div>
                   </Link>
                 </div>
-                <div className="col-span-4 hidden md:block">
+                <div className="col-span-4 hidden md:block mx-auto">
                   <Link href={`/blog/${blog.slug.current}`}>
                     <a>
                       <Slider {...settings}>
                         {blog.gallery.map((image) => (
-                          <img
+                          <Image
+                            height="450"
+                            width="450"
+                            objectFit="contain"
                             key={blog._id}
-                            className="h-80 w-full object-cover hover:scale-125 transition-all duration-200"
+                            className="hover:scale-125 transition-all duration-200"
                             src={urlFor(image).url()}
                             alt={image.alt ? image.alt : "Sensory gym"}
                           />
@@ -118,9 +121,12 @@ function blog({ blogs }) {
                       <a>
                         <Slider {...settings}>
                           {blog.gallery.map((image) => (
-                            <img
+                            <Image
+                              height="400"
+                              width="400"
+                              objectFit="contain"
                               key={blog._id}
-                              className="h-60 w-full object-cover hover:scale-125 transition-all duration-200"
+                              className="hover:scale-125 transition-all duration-200"
                               src={urlFor(image).url()}
                               alt={image.alt ? image.alt : "Sensory gym"}
                             />
