@@ -5,7 +5,8 @@
       2,
       {
         "ignore": [
-          "jsx"
+          "page_id",
+          "attribution"
         ]
       }
     ]
