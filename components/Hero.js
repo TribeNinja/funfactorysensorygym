@@ -6,6 +6,7 @@ import VisibilitySensor from "react-visibility-sensor";
 import Slider from "react-slick";
 import Link from "next/link";
 import { TiTickOutline } from "react-icons/ti";
+import Image from "next/image";
 
 const Hero = () => {
   const settings = {
@@ -22,7 +23,7 @@ const Hero = () => {
         <div className="flex space-x-8 items-center">
           <Link href="/">
             <a className="w-20 md:w-24 lg:w-32 cursor-pointer">
-              <img src="/logo2.png" alt="" />
+              <Image src="/logo2.png" width="100%" height="100%" alt="" />
             </a>
           </Link>
 
