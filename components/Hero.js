@@ -22,8 +22,8 @@ const Hero = () => {
       <header className="hidden md:grid grid-cols-2 py-4 px-6 md:px-14 z-10 items-center absolute max-w-7xl w-full font-medium">
         <div className="flex space-x-8 items-center">
           <Link href="/">
-            <a className="w-20 md:w-24 lg:w-32 cursor-pointer">
-              <Image src="/logo2.png" width="200px" height="180px" alt="" />
+            <a className="w-20 h-16 md:w-24 md:h-20 lg:w-32 lg:h-28 relative cursor-pointer">
+              <Image src="/logo2.png" layout="fill" objectFit="cover" alt="" />
             </a>
           </Link>
 
