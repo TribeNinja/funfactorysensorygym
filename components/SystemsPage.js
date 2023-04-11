@@ -85,7 +85,7 @@ const SystemsPage = ({ system }) => {
                 width="1080"
                 layout="responsive"
                 className=""
-                objectFit="cover"
+                objectFit="contain"
                 src={urlFor(image).url()}
                 alt={image.alt ? image.alt : "Sensory gym"}
               />
@@ -93,7 +93,7 @@ const SystemsPage = ({ system }) => {
           </Slider>
         </div>
         {system._type === "blog" && (
-          <p className="text-xl md:text-3xl mt-10 md:mt-14 font-bold">
+          <p className="text-xl md:text-3xl mt-10 md:mt-14 font-bold max-w-3xl mx-auto">
             {system.title}
           </p>
         )}
@@ -266,7 +266,7 @@ const SystemsPage = ({ system }) => {
             serializers={serializers}
           />
         </article>
-        <div className="space-y-3 text-ffsgPink mt-10">
+        <div className="space-y-3 text-ffsgPink mt-10 max-w-3xl mx-auto">
           <p className="text-md md:text-lg">Share this</p>
           <div className="flex space-x-4 md:space-x-6 text-3xl md:text-4xl">
             <FacebookShareButton url={URL}>
