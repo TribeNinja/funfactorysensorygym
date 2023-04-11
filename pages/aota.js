@@ -9,8 +9,8 @@ import {
   BsLinkedin,
   BsPinterest,
 } from "react-icons/bs";
-import ShareButton from "react-share/lib/ShareButton";
 import { AotaButton } from "../components/aota/AotaButton";
+import Link from "next/link";
 
 const aota = () => {
   return (
@@ -69,7 +69,9 @@ const aota = () => {
                   </h2>
                 </div>
                 <div className="lg:ml-14 mt-8 ml-auto mr-auto">
-                  <AotaButton label={"Book Now"} type="bg" />
+                  <Link href="#bookNow">
+                    <AotaButton label={"Book Now"} type="bg" />
+                  </Link>
                 </div>
               </div>
 
@@ -106,7 +108,7 @@ const aota = () => {
       </header>
 
       {/* Body */}
-      <div className="max-w-3xl mx-auto py-40">
+      <div id="bookNow" className="max-w-3xl mx-auto py-40">
         <div className="p-10 bg-white shadow-xl rounded-2xl">
           <div className="space-y-4">
             <h2 className="text-4xl font-bold leading-snug">
