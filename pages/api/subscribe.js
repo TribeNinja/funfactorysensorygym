@@ -11,7 +11,7 @@ async function postToWebhook(webhookURL, data) {
   }
 }
 
-const Subscribe = async (req, res) => {
+export default async (req, res) => {
   const { email } = req.body;
 
   postToWebhook(process.env.ZAPIER_NEWSLETTER, {
@@ -53,5 +53,3 @@ const Subscribe = async (req, res) => {
     res.status(200).json({ status: "success" });
   });
 };
-
-export default Subscribe;

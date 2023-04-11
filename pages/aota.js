@@ -1,7 +1,14 @@
 import Image from "next/image";
 import React from "react";
 import { GrSend } from "react-icons/gr";
-import {BsFacebook,BsInstagram,BsTwitter, BsYoutube, BsLinkedin, BsPinterest} from "react-icons/bs"
+import {
+  BsFacebook,
+  BsInstagram,
+  BsTwitter,
+  BsYoutube,
+  BsLinkedin,
+  BsPinterest,
+} from "react-icons/bs";
 import ShareButton from "react-share/lib/ShareButton";
 import { AotaButton } from "../components/aota/AotaButton";
 
@@ -304,34 +311,32 @@ const aota = () => {
                 </h2>
               </div>
             </div>
-            
           </div>
-          
         </div>
         <div className="flex justify-around items-center ">
           <div className="flex justify-around items-center lg:w-1/3 w-full">
-              <div className="flex justify-around items-center  rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
-                <BsFacebook />
-              </div>
-              <div className="flex justify-around items-center rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
-                <BsTwitter />
-              </div>
-              <div className="flex justify-around items-center rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
-                <BsInstagram />
-              </div>
-              <div className="flex justify-around items-center rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
-                <BsYoutube />
-              </div>
-              <div className="flex justify-around items-center rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
-                <BsPinterest />
-              </div>
-              <div className="flex justify-around items-center rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
-                <BsLinkedin />
-              </div>
+            <div className="flex justify-around items-center  rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
+              <BsFacebook />
+            </div>
+            <div className="flex justify-around items-center rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
+              <BsTwitter />
+            </div>
+            <div className="flex justify-around items-center rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
+              <BsInstagram />
+            </div>
+            <div className="flex justify-around items-center rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
+              <BsYoutube />
+            </div>
+            <div className="flex justify-around items-center rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
+              <BsPinterest />
+            </div>
+            <div className="flex justify-around items-center rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
+              <BsLinkedin />
+            </div>
           </div>
-      </div>  
+        </div>
         <div className="text-center py-10 text-[#585C65]">
-            <h2>© 2023 Fun Factory Sensory Gym, LLC</h2>
+          <h2>© 2023 Fun Factory Sensory Gym, LLC</h2>
         </div>
       </div>
     </div>

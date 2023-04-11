@@ -11,7 +11,7 @@ async function postToWebhook(webhookURL, data) {
   }
 }
 
-const ApiSuccess = async (req, res) => {
+export default async (req, res) => {
   const {
     firstName,
     lastName,
@@ -96,5 +96,3 @@ const ApiSuccess = async (req, res) => {
     res.status(200).json({ status: "success" });
   });
 };
-
-export default ApiSuccess;

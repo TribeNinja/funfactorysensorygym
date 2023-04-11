@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer");
 const fs = require("fs");
 const path = require("path");
 
-const GiftCode = async (req, res) => {
+export default async (req, res) => {
   const {
     recipientEmail,
     senderName,
@@ -55,5 +55,3 @@ const GiftCode = async (req, res) => {
     res.status(200).json({ status: "success" });
   });
 };
-
-export default GiftCode;
