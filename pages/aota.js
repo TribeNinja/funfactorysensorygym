@@ -317,7 +317,7 @@ const Aota = () => {
                 <div className="flex justify-center items-center lg:col-span-1 ">
                   <div className="">
                     <Image
-                      src="/NBC_Logo.png"
+                      src="/NBC_logo.png"
                       width="150px"
                       height="150px"
                       alt="NBC"
