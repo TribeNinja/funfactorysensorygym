@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import { GrSend } from "react-icons/gr";
 import {
   BsFacebook,
@@ -10,9 +10,30 @@ import {
   BsPinterest,
 } from "react-icons/bs";
 import { AotaButton } from "../components/aota/AotaButton";
-import Link from "next/link";
+import emailjs from "@emailjs/browser";
 
-const aota = () => {
+const Aota = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    emailjs
+      .sendForm(
+        "service_6gwnxlg",
+        "template_1aacbg4",
+        form.current,
+        "fDnRGjXsxGgVpe5x3"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.preventDefault();
+    e.target.reset();
+  };
+
   return (
     <div className="bg-[#FBF9FC]">
       {/* Hero */}
@@ -26,8 +47,12 @@ const aota = () => {
                 height="300px"
                 alt="TherapyTalk"
               />
-              <div className="flex items-center lg:mt-0 mt-[-5vh]">
-                <AotaButton label={"Contact Us"} type="default" />
+              <div className="flex items-center lg:mt-0 mt-[-5vh] z-50">
+                <AotaButton
+                  label="Contact Us"
+                  type="default"
+                  link="#footerId"
+                />
               </div>
             </div>
           </div>
@@ -69,9 +94,7 @@ const aota = () => {
                   </h2>
                 </div>
                 <div className="lg:ml-14 mt-8 ml-auto mr-auto">
-                  <Link href="#bookNow">
-                    <AotaButton label={"Book Now"} type="bg" />
-                  </Link>
+                  <AotaButton label="Book Now" type="bg" link="#bookNow" />
                 </div>
               </div>
 
@@ -108,8 +131,8 @@ const aota = () => {
       </header>
 
       {/* Body */}
-      <div id="bookNow" className="max-w-3xl mx-auto py-40">
-        <div className="p-10 bg-white shadow-xl rounded-2xl">
+      <div onSubmit={sendEmail} className="max-w-3xl mx-auto py-40">
+        <div id="bookNow" className="p-10 bg-white shadow-xl rounded-2xl">
           <div className="space-y-4">
             <h2 className="text-4xl font-bold leading-snug">
               Please sign up in our form below if you would like to meet Petros
@@ -125,13 +148,14 @@ const aota = () => {
             </p>
           </div>
 
-          <form className="mt-8 space-y-6">
+          <form ref={form} className="mt-8 space-y-6">
             <div className="grid grid-cols-2 gap-8">
               <div>
                 <input
                   type="text"
                   placeholder="Name"
                   className="py-2 px-1 w-full outline-none text-gray-500"
+                  name="name"
                 />
                 <div className="border-b-2" />
               </div>
@@ -139,6 +163,7 @@ const aota = () => {
                 <input
                   type="text"
                   placeholder="Email"
+                  name="email"
                   className="py-2 px-1 w-full outline-none text-gray-500"
                 />
                 <div className="border-b-2" />
@@ -149,6 +174,7 @@ const aota = () => {
                 <input
                   type="number"
                   placeholder="Phone"
+                  name="phone"
                   className="py-2 px-1 w-full outline-none text-gray-500"
                 />
                 <div className="border-b-2" />
@@ -173,6 +199,7 @@ const aota = () => {
                 <input
                   type="text"
                   placeholder="City"
+                  name="city"
                   className="py-2 px-1 w-full outline-none text-gray-500"
                 />
                 <div className="border-b-2" />
@@ -245,6 +272,7 @@ const aota = () => {
                 rows="5"
                 placeholder="Comments"
                 className="py-2 px-1 w-full outline-none text-gray-500"
+                name="comments"
               />
               <div className="border-b-2" />
             </div>
@@ -261,7 +289,7 @@ const aota = () => {
       </div>
 
       {/* Footer */}
-      <div className="container max-w-7xl mx-auto">
+      <div id="footerId" className="container max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
           <div className="lg:col-span-1 flex flex-col justify-center items-center mb-10">
             <Image
@@ -271,7 +299,7 @@ const aota = () => {
               alt="aota_Underline"
             />
             <div className="mt-10">
-              <AotaButton label={"Visit"} type={"bg"} />
+              <AotaButton label={"Visit"} type={"bg"} link="/" />
             </div>
           </div>
           <div className="lg:col-span-2 ">
@@ -345,4 +373,4 @@ const aota = () => {
   );
 };
 
-export default aota;
+export default Aota;

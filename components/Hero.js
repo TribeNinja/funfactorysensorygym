@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="flex space-x-8 items-center">
           <Link href="/">
             <a className="w-20 md:w-24 lg:w-32 cursor-pointer">
-              <Image src="/logo2.png" width="100%" height="100%" alt="" />
+              <Image src="/logo2.png" width="200px" height="180px" alt="" />
             </a>
           </Link>
 
