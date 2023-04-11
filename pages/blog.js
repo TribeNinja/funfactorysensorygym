@@ -31,33 +31,57 @@ function blog({ blogs }) {
         ></meta>
       </Head>
       <Header StartFromTop={true} />
-      <div className="mt-48 max-w-7xl mx-auto">
+      <div className="mt-48 max-w-5xl mx-auto">
         <div className="mx-6 md:mx-14">
           <div className="text-center my-16 mx-auto">
             <h1 className="text-3xl font-bold uppercase">Blog</h1>
           </div>
-          <div className="space-y-16">
+          <div>
             {blogs.map((blog, i) => (
-              <div
-                className="grid grid-cols-1 md:grid-cols-7 gap-10 items-center"
-                key={blog._id}
-              >
-                <div
-                  className={`${
-                    i % 2 == 0 ? "block" : "hidden"
-                  } col-span-3 space-y-7`}
-                >
-                  <h1 className="text-xl md:text-3xl font-semibold ">
-                    {blog.title}
-                  </h1>
-                  <div className="line-clamp-4 text-gray-500">
-                    <BlockContent
-                      dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
-                      projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
-                      blocks={blog.body}
-                    />
+              <div key={blog._id}>
+                <div className="flex items-center md:space-x-14">
+                  <div className="w-full md:w-3/5">
+                    <h1 className="text-xl md:text-3xl font-semibold md:leading-normal">
+                      {blog.title}
+                    </h1>
+                    <div className="line-clamp-4 text-gray-500 mt-4 md:mt-6">
+                      <BlockContent
+                        dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
+                        projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
+                        blocks={blog.body}
+                        className="md:text-lg leading-relaxed"
+                      />
+                    </div>
+                    <div className="md:hidden ">
+                      <Link href={`/blog/${blog.slug.current}`}>
+                        <a>
+                          <Slider {...settings}>
+                            {blog.gallery.map((image, i) => (
+                              <div
+                                className="w-full h-80 relative my-6"
+                                key={i}
+                              >
+                                <Image
+                                  layout="fill"
+                                  objectFit="contain"
+                                  key={blog._id}
+                                  className="hover:scale-125 transition-all duration-200"
+                                  src={urlFor(image).url()}
+                                  alt={image.alt ? image.alt : "Sensory gym"}
+                                />
+                              </div>
+                            ))}
+                          </Slider>
+                        </a>
+                      </Link>
+                    </div>
+                    <Link href={`/blog/${blog.slug.current}`}>
+                      <div className="flex items-center space-x-2 md:mt-8 hover:underline cursor-pointer font-semibold text-ffsgPink">
+                        <p>Learn more</p> <BsArrowRight />
+                      </div>
+                    </Link>
                   </div>
-                  <div className="md:hidden">
+                  <div className="col-span-4 hidden md:block mx-auto">
                     <Link href={`/blog/${blog.slug.current}`}>
                       <a>
                         <Slider {...settings}>
@@ -76,71 +100,8 @@ function blog({ blogs }) {
                       </a>
                     </Link>
                   </div>
-                  <Link href={`/blog/${blog.slug.current}`}>
-                    <div className="flex items-center space-x-2 hover:underline cursor-pointer font-semibold text-ffsgPink">
-                      <p>Learn more</p> <BsArrowRight />
-                    </div>
-                  </Link>
                 </div>
-                <div className="col-span-4 hidden md:block mx-auto">
-                  <Link href={`/blog/${blog.slug.current}`}>
-                    <a>
-                      <Slider {...settings}>
-                        {blog.gallery.map((image) => (
-                          <Image
-                            height="450"
-                            width="450"
-                            objectFit="contain"
-                            key={blog._id}
-                            className="hover:scale-125 transition-all duration-200"
-                            src={urlFor(image).url()}
-                            alt={image.alt ? image.alt : "Sensory gym"}
-                          />
-                        ))}
-                      </Slider>
-                    </a>
-                  </Link>
-                </div>
-                <div
-                  className={`${
-                    i % 2 == 0 ? "hidden" : "block"
-                  } col-span-3 space-y-7`}
-                >
-                  <h1 className="text-xl md:text-3xl font-semibold ">
-                    {blog.title}
-                  </h1>
-                  <div className="line-clamp-4 text-gray-500">
-                    <BlockContent
-                      dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
-                      projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
-                      blocks={blog.body}
-                    />
-                  </div>
-                  <div className="md:hidden">
-                    <Link href={`/blog/${blog.slug.current}`}>
-                      <a>
-                        <Slider {...settings}>
-                          {blog.gallery.map((image) => (
-                            <Image
-                              height="400"
-                              width="400"
-                              objectFit="contain"
-                              key={blog._id}
-                              className="hover:scale-125 transition-all duration-200"
-                              src={urlFor(image).url()}
-                              alt={image.alt ? image.alt : "Sensory gym"}
-                            />
-                          ))}
-                        </Slider>
-                      </a>
-                    </Link>
-                  </div>
-                  <Link href={`/blog/${blog.slug.current}`}>
-                    <div className="flex items-center space-x-2 hover:underline cursor-pointer font-semibold text-ffsgPink">
-                      <p>Learn more</p> <BsArrowRight />
-                    </div>
-                  </Link>
-                </div>
+                <hr className="my-10 md:my-16" />
               </div>
             ))}
           </div>
