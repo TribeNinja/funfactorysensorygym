@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { GrSend } from "react-icons/gr";
+import {BsFacebook,BsInstagram,BsTwitter, BsYoutube, BsLinkedin, BsPinterest} from "react-icons/bs"
 import ShareButton from "react-share/lib/ShareButton";
 import { AotaButton } from "../components/aota/AotaButton";
 
@@ -251,7 +252,88 @@ const aota = () => {
       </div>
 
       {/* Footer */}
-      <div></div>
+      <div className="container max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
+          <div className="lg:col-span-1 flex flex-col justify-center items-center mb-10">
+            <Image
+              src="/logo2.png"
+              width="300px"
+              height="250px"
+              alt="aota_Underline"
+            />
+            <div className="mt-10">
+              <AotaButton label={"Visit"} type={"bg"} />
+            </div>
+          </div>
+          <div className="lg:col-span-2 ">
+            <div className="grid grid-rows-2  gap-4">
+              {/* TOP */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
+                <div className="flex flex-col lg:col-span-2  ">
+                  <h2 className="text-8xl lg:text-left text-center font-bold">
+                    THE ONLY
+                  </h2>
+                  <h2 className="text-5xl lg:text-left text-center font-bold">
+                    Trusted Professionals
+                  </h2>
+                </div>
+                <div className="flex justify-center items-center lg:col-span-1 ">
+                  <div className="">
+                    <Image
+                      src="/NBC_Logo.png"
+                      width="150px"
+                      height="150px"
+                      alt="NBC"
+                    />
+                  </div>
+                </div>
+              </div>
+              {/* Bottom */}
+              <div className="lg:h-full">
+                <h2 className="text-gray-xl leading-9	text-[#585C65] lg:text-left text-center">
+                  AS SEEN ON NBC SHOW &ldquo;GEORGE TO THE RESCUE&rdquo;:
+                </h2>
+                <h2 className="text-gray-xl leading-9	text-[#585C65] lg:text-left text-center">
+                  &ldquo;Fun Factory made this episode the best of our 12 years,
+                  Barr none the absolute best. It is clear to all in this
+                  industry that you are who you are by what and how you do it,
+                  we call you the untouchables.&rdquo;
+                </h2>
+                <h2 className="text-xl font-bold leading-9 text-[#585C65] lg:text-left text-center">
+                  - Andrew Scerbo Executive Producer NBCUniversal / LXTV
+                </h2>
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+        <div className="flex justify-around items-center ">
+          <div className="flex justify-around items-center lg:w-1/3 w-full">
+              <div className="flex justify-around items-center  rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
+                <BsFacebook />
+              </div>
+              <div className="flex justify-around items-center rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
+                <BsTwitter />
+              </div>
+              <div className="flex justify-around items-center rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
+                <BsInstagram />
+              </div>
+              <div className="flex justify-around items-center rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
+                <BsYoutube />
+              </div>
+              <div className="flex justify-around items-center rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
+                <BsPinterest />
+              </div>
+              <div className="flex justify-around items-center rounded-full bg-[#691C64] w-[50px] h-[50px] text-[#FBF9FC]">
+                <BsLinkedin />
+              </div>
+          </div>
+      </div>  
+        <div className="text-center py-10 text-[#585C65]">
+            <h2>© 2023 Fun Factory Sensory Gym, LLC</h2>
+        </div>
+      </div>
     </div>
   );
 };
