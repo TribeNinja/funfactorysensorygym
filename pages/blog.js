@@ -38,8 +38,8 @@ function blog({ blogs }) {
           </div>
           <div>
             {blogs.map((blog, i) => (
-              <div>
-                <div className="flex items-center md:space-x-14" key={blog._id}>
+              <div key={blog._id}>
+                <div className="flex items-center md:space-x-14">
                   <div className="w-full md:w-3/5">
                     <h1 className="text-xl md:text-3xl font-semibold md:leading-normal">
                       {blog.title}
@@ -56,8 +56,11 @@ function blog({ blogs }) {
                       <Link href={`/blog/${blog.slug.current}`}>
                         <a>
                           <Slider {...settings}>
-                            {blog.gallery.map((image) => (
-                              <div className="w-full h-80 relative my-6">
+                            {blog.gallery.map((image, i) => (
+                              <div
+                                className="w-full h-80 relative my-6"
+                                key={i}
+                              >
                                 <Image
                                   layout="fill"
                                   objectFit="contain"
