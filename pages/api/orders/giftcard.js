@@ -8,8 +8,7 @@ async function postToWebhook(webhookURL, data) {
     console.error(error);
   }
 }
-
-export default async (req, res) => {
+const GiftCard = async (req, res) => {
   const projectId = config.projectId;
   const dataset = config.dataset;
   const tokenWithWriteAccess = process.env.SANITY_AUTH_TOKEN;
@@ -40,3 +39,5 @@ export default async (req, res) => {
 
   res.status(201).send(data.results[0]);
 };
+
+export default GiftCard;

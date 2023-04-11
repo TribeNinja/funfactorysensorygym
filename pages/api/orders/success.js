@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer");
 const fs = require("fs");
 const path = require("path");
 
-export default async (req, res) => {
+const Success = async (req, res) => {
   const { senderEmail, recipientEmail, orderId, date, title, price, image } =
     req.body;
 
@@ -47,3 +47,5 @@ export default async (req, res) => {
     res.status(200).json({ status: "success" });
   });
 };
+
+export default Success;
