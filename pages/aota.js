@@ -101,10 +101,12 @@ const Aota = () => {
                 </div>
                 <div>
                   <h2 className="text-gray-500 mt-4 lg:mt-8">
-                    Therapy Talk is the one-stop online resource for all advice,
-                    guidelines, and information relating to therapy tools,
-                    sensory gyms, tips and techniques to help children,
-                    families, and therapists.
+                    Fun factory sensory gym is the nation&apos;s leading custom
+                    sensory gym installer. We have installed over 4000 gyms in
+                    clinics, private homes, hospitals, churches and have helped
+                    over 500,000 children and families. Therapy Talk is a
+                    non-profit initiative to help educate and guide new
+                    therapists, students, and struggling parents.
                   </h2>
                 </div>
                 <div className="mt-8 mr-auto">
@@ -119,20 +121,21 @@ const Aota = () => {
                     <div className="rounded-full w-[80vw] h-[80vw] lg:w-[20vw] lg:h-[20vw] bg-[url('/petros.jpg')] bg-no-repeat bg-cover"></div>
                   </div>
                 </div>
-                <div className=" flex flex-col items-center justify-center w-[90vw] h-[50vh] lg:w-[30vw] lg:h-[35vh] mt-[-12vh] bg-white shadow-xl rounded-3xl">
+                <div className=" flex flex-col items-center justify-center w-[90vw] h-[55vh] lg:w-[30vw] lg:h-[39vh] mt-[-12vh] bg-white shadow-xl rounded-3xl">
                   <div className="flex items-center justify-center w-[80vw] h-[5vh] lg:w-[27vw] lg:h-[5vh]  rounded-full bg-[#691C64]">
                     <h2 className="text-[#e5e5e5]">Petros Chalkitis</h2>
                   </div>
                   <h2 className="text-gray-400 px-7 py-2">
-                    Petros graduated with a master&apos;s in OT in 2005 from
-                    NYIT. I have a 17-year of experience working with the
-                    pediatric population, both school-based for the NYC
-                    Department of Education, home-based early intervention, and
-                    sensory integration private practice.
+                    Petros graduated with a Masters in OT in 2005 from New York
+                    Institute of Technology. He has 17 years of experience
+                    working with the pediatric population, both school-based for
+                    the NYC Department of Education, home-based early
+                    intervention and sensory integration private practice.
                   </h2>
                   <h2 className="text-gray-400 px-7 py-2">
-                    He will be representing Therapy Talk, answering your
-                    questions, and providing guidance.
+                    He will be representing Therapy Talk, answering all your
+                    questions and providing guidance on any matter relating to
+                    occupational therapy.
                   </h2>
                   <h2 className=" px-2 py-2 text-center text-cyan-500">
                     @your_neighborhood_ot
@@ -159,12 +162,10 @@ const Aota = () => {
               Chalkitis
             </h2>
             <p className="text-gray-500">
-              Fun factory sensory gym is the nation&apos;s leading custom
-              sensory gym installer. We have installed over 4000 gyms in
-              clinics, private homes, hospitals, churches and have helped over
-              500,000 children and families. Therapy Talk is a non-profit
-              initiative to help educate and guide new therapists, students, and
-              struggling parents.
+              Therapy Talk is the one-stop online resource for all advice,
+              guidelines, and information relating to therapy tools, sensory
+              gyms, tips and techniques to help children, families, and
+              therapists.
             </p>
           </div>
 
