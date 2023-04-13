@@ -52,16 +52,16 @@ const Aota = () => {
         <div className="max-w-7xl mx-auto pb-24 lg:pb-28">
           <div className="flex items-center pt-8 min-w-fit">
             <div className="flex flex-col lg:flex-row justify-between items-center lg:h-48 w-full lg:py-1 mt-[-5vh] lg:mt-0">
-              <div className="w-32 lg:w-40 h-28 lg:h-36 relative mt-10 lg:mt-0">
+              <div className="w-32 lg:w-44 h-28 lg:h-40 relative mt-10 lg:mt-0">
                 <Image
-                  src="/TTLogo.png"
+                  src="/logo2.png"
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contain"
                   alt="TherapyTalk"
                 />
               </div>
 
-              <div className="hidden lg:flex items-center lg:mt-0 mt-[-5vh] z-50">
+              <div className="hidden lg:flex items-center mt-[-5vh] z-50">
                 <AotaButton
                   label="Contact Us"
                   type="default"
@@ -70,7 +70,7 @@ const Aota = () => {
               </div>
             </div>
           </div>
-          <div className="container lg:mt-0 mt-6  mx-auto">
+          <div className="container lg:-mt-6 mt-6  mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div className="flex flex-col justify-center">
                 <h1 className="lg:text-[45px] text-[30px] font-bold">
@@ -121,23 +121,28 @@ const Aota = () => {
                     <div className="rounded-full w-[80vw] h-[80vw] lg:w-[20vw] lg:h-[20vw] bg-[url('/petros.jpg')] bg-no-repeat bg-cover"></div>
                   </div>
                 </div>
-                <div className=" flex flex-col items-center justify-center w-[90vw] h-[55vh] lg:w-[30vw] lg:h-[39vh] mt-[-12vh] bg-white shadow-xl rounded-3xl">
+                <div className=" flex flex-col items-center justify-center w-[90vw] h-[45vh] lg:w-[40vw] xl:w-[30vw] md:h-[30vh] lg:h-[33vh] mt-[-12vh] bg-white shadow-xl rounded-3xl">
                   <div className="flex items-center justify-center w-[80vw] h-[5vh] lg:w-[27vw] lg:h-[5vh]  rounded-full bg-[#691C64]">
-                    <h2 className="text-[#e5e5e5]">Petros Chalkitis</h2>
+                    <h2 className="text-[#e5e5e5] font-semibold">
+                      Petros Chalkitis
+                    </h2>
                   </div>
-                  <h2 className="text-gray-400 px-7 py-2">
-                    Petros graduated with a Masters in OT in 2005 from New York
-                    Institute of Technology. He has 17 years of experience
-                    working with the pediatric population, both school-based for
-                    the NYC Department of Education, home-based early
-                    intervention and sensory integration private practice.
+                  <h2 className="text-gray-400 px-5 lg:px-7 py-2">
+                    With a master's in OT from NYIT and 17 years of experience
+                    with the pediatric population in different settings, Petros
+                    specializes in young children aged 2 to 10, using
+                    therapeutic tools such as reflex integration, therapeutic
+                    listening, kids’ yoga, astronaut training and rhythmic
+                    movement training. He’s also one of the first OTs to
+                    participate in the SEED program of the NYC
+                    Dept of Education.
                   </h2>
-                  <h2 className="text-gray-400 px-7 py-2">
+                  {/* <h2 className="text-gray-400 px-7 py-2">
                     He will be representing Therapy Talk, answering all your
                     questions and providing guidance on any matter relating to
                     occupational therapy.
-                  </h2>
-                  <h2 className=" px-2 py-2 text-center text-cyan-500">
+                  </h2> */}
+                  <h2 className=" px-2 text-center text-cyan-500">
                     @your_neighborhood_ot
                   </h2>
                 </div>
@@ -162,10 +167,9 @@ const Aota = () => {
               Chalkitis
             </h2>
             <p className="text-gray-500">
-              Therapy Talk is the one-stop online resource for all advice,
-              guidelines, and information relating to therapy tools, sensory
-              gyms, tips and techniques to help children, families, and
-              therapists.
+              Therapy Talk is an online resource for all advice, guidelines, and
+              information relating to therapy tools, sensory gyms, tips and
+              techniques to help children, families, and therapists.
             </p>
           </div>
 
@@ -301,7 +305,7 @@ const Aota = () => {
             <div />
             <button
               type="submit"
-              className="rounded-full bg-[#691C64] py-3 w-full text-white text-lg font-bold"
+              className="rounded-full bg-[#691C64] py-3 w-full text-white text-lg font-semibold"
             >
               Send
             </button>
@@ -311,56 +315,37 @@ const Aota = () => {
 
       {/* Footer */}
       <div id="footerId" className="container max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
-          <div className="lg:col-span-1 flex flex-col justify-center items-center mb-10">
-            <Image
-              src="/logo2.png"
-              width="300px"
-              height="250px"
-              alt="aota_Underline"
-            />
-            <div className="mt-10">
-              <AotaButton label={"Visit"} type={"bg"} link="/" />
+        <div className="grid grid-cols-1 lg:grid-cols-4 items-center">
+          <div className="lg:col-span-1 flex flex-col justify-center items-center">
+            <div className="h-40 w-44 lg:h-52 lg:w-60 relative">
+              <Image
+                src="/logo2.png"
+                layout="fill"
+                objectFit="contain"
+                alt="aota_Underline"
+              />
             </div>
+
+            {/* <div className="mt-10">
+              <AotaButton label={"Visit"} type={"bg"} link="/" />
+            </div> */}
           </div>
           <div className="lg:col-span-2 ">
-            <div className="grid grid-rows-2  gap-4">
-              {/* TOP */}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
-                <div className="flex flex-col lg:col-span-2  ">
-                  <h2 className="text-6xl lg:text-8xl lg:text-left text-center font-bold">
-                    THE ONLY
-                  </h2>
-                  <h2 className="text-4xl lg:text-5xl lg:text-left text-center font-bold">
-                    Trusted Professionals
-                  </h2>
-                </div>
-                <div className="flex justify-center items-center lg:col-span-1 ">
-                  <div className="">
-                    <Image
-                      src="/NBC_logo.png"
-                      width="150px"
-                      height="150px"
-                      alt="NBC"
-                    />
-                  </div>
-                </div>
-              </div>
-              {/* Bottom */}
-              <div className="lg:h-full">
-                <h2 className="text-gray-xl leading-9	text-[#585C65] lg:text-left text-center">
-                  AS SEEN ON NBC SHOW &ldquo;GEORGE TO THE RESCUE&rdquo;:
-                </h2>
-                <h2 className="text-gray-xl leading-9	text-[#585C65] lg:text-left text-center">
-                  &ldquo;Fun Factory made this episode the best of our 12 years,
-                  Barr none the absolute best. It is clear to all in this
-                  industry that you are who you are by what and how you do it,
-                  we call you the untouchables.&rdquo;
-                </h2>
-                <h2 className="text-xl font-bold leading-9 text-[#585C65] lg:text-left text-center">
-                  - Andrew Scerbo Executive Producer NBCUniversal / LXTV
-                </h2>
-              </div>
+            <h2 className="text-3xl lg:text-[54px] text-center font-bold leading-snug lg:leading-normal">
+              One Custom Gym, Unlimited Possibilities
+            </h2>
+            <h2 className="text-xl font-bold leading-9 text-[#585C65] text-center mt-2">
+              Made possible with Fun Factory Sensory Gym
+            </h2>
+          </div>
+          <div className="lg:col-span-1 flex flex-col justify-center items-center">
+            <div className="h-40 w-44 lg:h-52 lg:w-60 relative">
+              <Image
+                src="/TTLogo.png"
+                layout="fill"
+                objectFit="contain"
+                alt="aota_Underline"
+              />
             </div>
           </div>
         </div>
