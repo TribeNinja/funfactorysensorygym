@@ -132,8 +132,8 @@ const Aota = () => {
                     with the pediatric population in different settings, Petros
                     specializes in young children aged 2 to 10, using
                     therapeutic tools such as reflex integration, therapeutic
-                    listening, kids’ yoga, astronaut training and rhythmic
-                    movement training. He’s also one of the first OTs to
+                    listening, kids&apos; yoga, astronaut training and rhythmic
+                    movement training. He&apos;s also one of the first OTs to
                     participate in the SEED program of the NYC
                     Dept of Education.
                   </h2>
