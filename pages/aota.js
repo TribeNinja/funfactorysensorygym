@@ -167,9 +167,15 @@ const Aota = () => {
               Chalkitis
             </h2>
             <p className="text-gray-500">
-              Therapy Talk is an online resource for all advice, guidelines, and
-              information relating to therapy tools, sensory gyms, tips and
-              techniques to help children, families, and therapists.
+              The AOTA INSPIRE | 2023 Annual Conference & Expo is taking place
+              in Kansas City, Missouri, this year. The purpose of the conference
+              is to unite thousands of occupational therapy professionals and
+              students in one central location to help them with their
+              professional learning and personal growth. Fun Factory Sensory Gym
+              is taking this opportunity to send one of Therapy Talk&apos;s
+              therapists, Petros Chalkitis to the conference, who will be
+              representing Therapy Talk, answering all questions and providing
+              guidance on any matter relating to occupational therapy.
             </p>
           </div>
 
@@ -335,7 +341,7 @@ const Aota = () => {
               One Custom Gym, Unlimited Possibilities
             </h2>
             <h2 className="text-xl font-bold leading-9 text-[#585C65] text-center mt-2">
-              Made possible with Fun Factory Sensory Gym
+              Fun Factory Sensory Gym proudly sponsors
             </h2>
           </div>
           <div className="lg:col-span-1 flex flex-col justify-center items-center">
