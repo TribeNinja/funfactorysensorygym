@@ -67,8 +67,8 @@ const Hero = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0">
         <div className="mt-40 lg:mt-36 xl:mt-40 items-center px-6 lg:px-14">
           <div className="space-y-6 lg:space-y-8 xl:max-w-lg">
-            <h1 className="font-semibold text-3xl lg:text-[45px] lg:leading-normal leading-snug text-center lg:text-left">
-              One Custom Gym, Unlimited Possibilities
+            <h1 className="font-semibold text-3xl lg:text-5xl lg:leading-normal leading-snug text-center lg:text-left">
+              One Gym, Unlimited Possibilities
             </h1>
             <p className="leading-relaxed">
               At Fun Factory Sensory Gym, we design, manufacture, and
