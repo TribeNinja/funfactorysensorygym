@@ -55,9 +55,9 @@ const Header = ({ StartFromTop }) => {
               </a>
             </Link>
 
-            <Link href={"/systems?sys=all"}>
+            <Link href={"/gallery"}>
               <a className="relative nav hover:text-ffsgPink cursor-pointer transition-all duration-200">
-                <span className="nav-link">Systems</span>
+                <span className="nav-link">Gallery</span>
               </a>
             </Link>
             <Link href="/blog">
@@ -98,26 +98,26 @@ const Header = ({ StartFromTop }) => {
             </a>
           </Link>
 
-          <Link href={"/systems?sys=all"}>
+          <Link href={"/gallery"}>
             <a
               className={`${
-                route.asPath == "/systems?sys=commercial" ||
-                route.asPath == "/systems?sys=home" ||
-                route.asPath == "/systems?sys=all"
+                route.asPath == "/gallery?sys=commercial" ||
+                route.asPath == "/gallery?sys=home" ||
+                route.asPath == "/gallery"
                   ? "text-ffsgPink"
                   : "text-black"
               } relative nav hidden md:block hover:text-ffsgPink cursor-pointer transition-all duration-200`}
             >
               <span
                 className={`${
-                  route.asPath == "/systems?sys=commercial" ||
-                  route.asPath == "/systems?sys=home" ||
-                  route.asPath == "/systems?sys=all"
+                  route.asPath == "/gallery?sys=commercial" ||
+                  route.asPath == "/gallery?sys=home" ||
+                  route.asPath == "/gallery"
                     ? "active-link"
                     : "nav-link"
                 }`}
               >
-                Systems
+                Gallery
               </span>
             </a>
           </Link>

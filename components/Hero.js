@@ -33,9 +33,9 @@ const Hero = () => {
             </a>
           </Link>
 
-          <Link href={"/systems?sys=all"}>
+          <Link href={"/gallery"}>
             <a className="relative nav hover:text-ffsgPink cursor-pointer transition-all duration-200">
-              <span className="nav-link">Systems</span>
+              <span className="nav-link">Gallery</span>
             </a>
           </Link>
           <Link href="/blog">

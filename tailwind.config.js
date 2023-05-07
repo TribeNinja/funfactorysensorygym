@@ -12,11 +12,9 @@ module.exports = {
         ffsgPink: "#FE346E",
         ffsgLightPink: "#FFEBF1",
         ffsgPurple: "#57358F",
+        ffsgGray: "#EDEDED",
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/line-clamp"),
-    require("@tailwindcss/typography"),
-  ],
+  plugins: [require("@tailwindcss/typography")],
 };

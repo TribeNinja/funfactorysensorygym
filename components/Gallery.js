@@ -64,7 +64,7 @@ const Gallery = ({ systems, type, short, title, description }) => {
           <p className="font-semibold text-3xl md:text-4xl">{short}</p>
         </div>
         <div className="hidden md:block ml-auto">
-          <Link href={`/systems?sys=${type}`}>
+          <Link href={`/gallery?sys=${type}`}>
             <a className="text-white px-6 py-3 bg-ffsgPink rounded-xl flex space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold">
               <p>Show All Projects</p>
               <FiArrowUpRight size="1.3em" />
@@ -82,7 +82,7 @@ const Gallery = ({ systems, type, short, title, description }) => {
             >
               <a>
                 <div className="group md:pr-6 pb-6 cursor-pointer">
-                  <div className="h-52 lg:h-64 bg-ffsgLightPink ">
+                  <div className="h-52 lg:h-64 bg-ffsgLightPink">
                     <div>
                       <Slider {...gallerySettings}>
                         {system.gallery.map((image) => (
@@ -93,14 +93,15 @@ const Gallery = ({ systems, type, short, title, description }) => {
                             objectFit="cover"
                             src={urlFor(image).url()}
                             alt={image.alt ? image.alt : "Sensory gym"}
+                            className=" rounded-t-lg"
                           />
                         ))}
                       </Slider>
                     </div>
                   </div>
-                  <div className="p-4 flex justify-between items-center bg-white">
-                    <div className="space-y-2">
-                      <div className="flex items-center space-x-2 text-xs md:text-sm text-ffsgPink">
+                  <div className="p-3 lg:p-4 flex justify-between items-center bg-white  rounded-b-lg">
+                    <div className="lg:space-y-1">
+                      <div className="flex items-center space-x-2 text-xs md:text-sm text-ffsgPink ">
                         {type == "commercial"
                           ? system.tags.map((tag, i) => {
                               if (i < (isMobile ? 1 : 2)) {
@@ -144,7 +145,7 @@ const Gallery = ({ systems, type, short, title, description }) => {
                         {system.title}
                       </p>
                     </div>
-                    <div className="hidden md:block p-3 bg-ffsgPink text-white group-hover:bg-ffsgPurple transition-colors duration-150">
+                    <div className="hidden md:block p-2 bg-ffsgPink text-white group-hover:bg-ffsgPurple transition-colors duration-150 rounded-md">
                       <FiArrowUpRight size="1.5em" />
                     </div>
                   </div>
@@ -152,9 +153,9 @@ const Gallery = ({ systems, type, short, title, description }) => {
               </a>
             </Link>
           ))}
-          <Link href={`/systems?sys=${type}`}>
+          <Link href={`/gallery?sys=${type}`}>
             <a>
-              <div className="bg-ffsgPink text-white w-[21.37rem] h-[18.25rem] md:w-[29.25rem] md:h-[21.5rem] hover:bg-ffsgLightPink hover:text-ffsgPink cursor-pointer transition-colors duration-150">
+              <div className="bg-ffsgPink text-white w-[21.37rem] h-[17rem] md:w-[29.25rem] md:h-[21.5rem] hover:bg-ffsgLightPink hover:text-ffsgPink cursor-pointer transition-colors duration-150  rounded-lg">
                 <p className="flex items-center justify-center h-full w-full font-semibold text-3xl">
                   + Show More
                 </p>
@@ -164,8 +165,8 @@ const Gallery = ({ systems, type, short, title, description }) => {
         </Slider>
       </div>
 
-      <div className="bg-ffsgPurple mt-4 md:mt-0">
-        <div className="grid grid-cols-1 md:grid-cols-2 pt-40 pb-12 md:pb-16 items-center max-w-7xl mx-auto px-6 md:px-14 text-white">
+      <div className="bg-ffsgPurple mt-8 lg:mt-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 pt-32 lg:pt-40 pb-12 md:pb-16 items-center max-w-7xl mx-auto px-6 md:px-14 text-white">
           <div className="space-y-2 md:space-y-3">
             <p className="uppercasefont-medium text-lg">{short}</p>
             <h3 className="font-semibold text-2xl md:text-4xl md:leading-normal leading-snug">
@@ -184,7 +185,7 @@ const Gallery = ({ systems, type, short, title, description }) => {
             </p>
           </div>
           <div className="md:hidden mx-auto mt-8">
-            <Link href={`/systems?sys=${type}`}>
+            <Link href={`/gallery?sys=${type}`}>
               <a className="text-white px-6 py-3 bg-ffsgPink rounded-xl flex space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold text-sm">
                 <p>Show All projects</p>
                 <FiArrowUpRight size="1.3em" />
