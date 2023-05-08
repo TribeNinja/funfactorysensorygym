@@ -49,7 +49,7 @@ const TestimonialNbc = () => {
       </Modal>
       <div className="text-center space-y-3 md:space-y-6">
         <div className="inline-block">
-          <img src="/NBC logo.png" alt="" className="w-20 md:w-28 lg:w-32" />
+          <img src="/NBC_logo.png" alt="" className="w-20 md:w-28 lg:w-32" />
         </div>
         <div className="space-y-4 lg:space-y-8">
           <p className="font-semibold text-4xl md:text-7xl lg:text-8xl">

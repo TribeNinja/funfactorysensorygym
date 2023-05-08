@@ -1,6 +1,6 @@
 import Footer from "components/Footer";
 import Header from "components/Header";
-import SystemGallery from "components/SystemGallery";
+import SystemGallery from "components/gallery/SystemGallery";
 import SystemsPage from "components/SystemsPage";
 import Head from "next/head";
 import { sanityClient } from "../../../sanity";

@@ -78,11 +78,11 @@ const SystemGallery = ({ systems }) => {
                         objectFit="cover"
                         layout="fill"
                         className="rounded-lg"
-                        src={urlFor(image).url()}
+                        src={urlFor(image).width(720).url()}
                         alt={image.alt ? image.alt : "Sensory gym"}
                       />
-                      <div className="absolute inset-0 bg-ffsgPink bg-opacity-50 rounded-lg flex justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                        <p className="text-white text-lg font-bold text-center opacity-100 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute inset-0 bg-ffsgPink bg-opacity-60 rounded-lg flex justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <p className="text-white text-lg lg:text-xl font-bold text-center opacity-100 group-hover:opacity-100 transition-opacity duration-300">
                           <FiArrowUpRight className="text-4xl mx-auto" /> View
                           more
                         </p>
@@ -155,7 +155,21 @@ const SystemGallery = ({ systems }) => {
         />
       </div>
 
-      {systems.length === 0 && <p>No gyms are available</p>}
+      {systems.length === 0 && (
+        <div className="flex flex-col justify-center items-center">
+          <div className="relative h-72 w-full">
+            <Image
+              objectFit="contain"
+              layout="fill"
+              src="/notfound.svg"
+              alt="No gyms are available"
+            />
+          </div>
+          <p className="mt-4 lg:mt-8 text-xl font-medium">
+            No gyms are available
+          </p>
+        </div>
+      )}
     </div>
   );
 };

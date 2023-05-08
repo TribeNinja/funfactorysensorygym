@@ -50,23 +50,16 @@ const Footer = () => {
           <div className="mt-8 md:mt-0 space-y-4 text-slate-300 font-light md:ml-auto text-sm">
             <p className="text-ffsgPink font-semibold">Systems</p>
             <div className="hover:cursor-pointer hover:underline">
-              <Link href="/systems?sys=all">
+              <Link href="/gallery?sys=commercial#recentInstallations">
                 <a>
-                  <p>All Systems</p>
+                  <p>Clinics</p>
                 </a>
               </Link>
             </div>
             <div className="hover:cursor-pointer hover:underline">
-              <Link href="/systems?sys=commercial">
+              <Link href="/gallery?sys=home#recentInstallations">
                 <a>
-                  <p>Commercial System</p>
-                </a>
-              </Link>
-            </div>
-            <div className="hover:cursor-pointer hover:underline">
-              <Link href="/systems?sys=home">
-                <a>
-                  <p>Home System</p>
+                  <p>Home Systems</p>
                 </a>
               </Link>
             </div>
