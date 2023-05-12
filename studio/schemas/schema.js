@@ -17,6 +17,7 @@ import giftcardOrders from "./giftcardOrders";
 import paymentResult from "./paymentResult";
 import deliveryDetails from "./deliveryDetails";
 import galleryPage from "./galleryPage";
+import sensoryEquipment from "./sensoryEquipment";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -28,6 +29,7 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     galleryPage,
+    sensoryEquipment,
     tag,
     categories,
     commercial,

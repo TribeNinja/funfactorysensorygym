@@ -6,7 +6,7 @@ import { urlFor } from "sanity";
 
 const SectionOne = ({ pageInfo }) => {
   const [galleryImages, setGalleryImages] = useState([]);
-  const [currentlyShowing, setCurrentlyShowing] = useState(4);
+  const [currentlyShowing, setCurrentlyShowing] = useState(isMobile ? 3 : 4);
 
   useEffect(() => {
     setGalleryImages(pageInfo.gallery.slice(0, currentlyShowing));
@@ -80,7 +80,9 @@ const SectionOne = ({ pageInfo }) => {
           {pageInfo.gallery.length > galleryImages.length && (
             <div className="text-white font-semibold flex mt-8 md:mt-12">
               <p
-                onClick={() => setCurrentlyShowing(currentlyShowing + 4)}
+                onClick={() =>
+                  setCurrentlyShowing(currentlyShowing + (isMobile ? 3 : 4))
+                }
                 className="py-3 px-6 lg:px-8 bg-ffsgPink cursor-pointer rounded-xl mx-auto hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink"
               >
                 Show More

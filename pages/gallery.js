@@ -6,7 +6,14 @@ import SectionOne from "components/gallery/SectionOne";
 import SectionTwo from "components/gallery/SectionTwo";
 import SectionThree from "components/gallery/SectionThree";
 
-const Gallery = ({ pageInfo, therapies, categories, commercials, homes }) => {
+const Gallery = ({
+  pageInfo,
+  equipment,
+  therapies,
+  categories,
+  commercials,
+  homes,
+}) => {
   return (
     <div>
       <Head>
@@ -31,7 +38,7 @@ const Gallery = ({ pageInfo, therapies, categories, commercials, homes }) => {
           commercials={commercials}
           homes={homes}
         />
-        <SectionThree pageInfo={pageInfo.sectionThree} />
+        <SectionThree pageInfo={pageInfo.sectionThree} equipment={equipment} />
       </div>
       <Footer />
     </div>
@@ -47,6 +54,14 @@ export const getServerSideProps = async () => {
     sectionTwo,
     sectionThree
   }`;
+
+  const queryEquipment = `*[_type == 'sensoryEquipment'] | order(_updatedAt desc) {
+    _id,
+    title,
+    description,
+    gallery
+  }
+  `;
 
   const queryTags = `*[_type == 'tag'] {
     _id,
@@ -81,6 +96,7 @@ export const getServerSideProps = async () => {
 
   const pageInfo = await sanityClient.fetch(queryPageInfo);
   const therapies = await sanityClient.fetch(queryTags);
+  const equipment = await sanityClient.fetch(queryEquipment);
   const categories = await sanityClient.fetch(queryCategories);
   const commercials = await sanityClient.fetch(queryCommercial);
   const homes = await sanityClient.fetch(queryHome);
@@ -88,6 +104,7 @@ export const getServerSideProps = async () => {
   return {
     props: {
       pageInfo,
+      equipment,
       therapies,
       categories,
       commercials,

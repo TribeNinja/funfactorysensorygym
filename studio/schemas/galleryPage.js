@@ -1,6 +1,9 @@
+import { IoMdImages } from "react-icons/io";
+
 export default {
   name: "galleryPage",
   title: "Gallery Page",
+  icon: IoMdImages,
   type: "document",
   fields: [
     {
@@ -96,24 +99,24 @@ export default {
         },
       ],
     },
-    {
-      title: "Section Three",
-      name: "sectionThree",
-      type: "object",
-      fields: [
-        {
-          title: "Title",
-          name: "title",
-          type: "string",
-          validation: (Rule) => Rule.required(),
-        },
-        {
-          name: "description",
-          title: "Description",
-          type: "text",
-          validation: (Rule) => Rule.required(),
-        },
-      ],
-    },
+    // {
+    //   title: "Section Three",
+    //   name: "sectionThree",
+    //   type: "object",
+    //   fields: [
+    //     {
+    //       title: "Title",
+    //       name: "title",
+    //       type: "string",
+    //       validation: (Rule) => Rule.required(),
+    //     },
+    //     {
+    //       name: "description",
+    //       title: "Description",
+    //       type: "text",
+    //       validation: (Rule) => Rule.required(),
+    //     },
+    //   ],
+    // },
   ],
 };
