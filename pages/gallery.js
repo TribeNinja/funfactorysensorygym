@@ -5,6 +5,7 @@ import { sanityClient } from "../sanity";
 import SectionOne from "components/gallery/SectionOne";
 import SectionTwo from "components/gallery/SectionTwo";
 import SectionThree from "components/gallery/SectionThree";
+import ClinicLocations from "components/gallery/ClinicLocations";
 
 const Gallery = ({
   pageInfo,
@@ -38,7 +39,8 @@ const Gallery = ({
           commercials={commercials}
           homes={homes}
         />
-        <SectionThree pageInfo={pageInfo.sectionThree} equipment={equipment} />
+        <SectionThree equipment={equipment} />
+        <ClinicLocations commercials={commercials} tags={therapies} />
       </div>
       <Footer />
     </div>

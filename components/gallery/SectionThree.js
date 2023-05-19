@@ -3,7 +3,7 @@ import Image from "next/image";
 import { urlFor } from "sanity";
 import { isMobile } from "react-device-detect";
 
-const SectionOne = ({ pageInfo, equipment }) => {
+const SectionOne = ({ equipment }) => {
   const [selected, setSelected] = useState(0);
   const [galleryImages, setGalleryImages] = useState([]);
   const [currentlyShowing, setCurrentlyShowing] = useState(isMobile ? 2 : 4);
