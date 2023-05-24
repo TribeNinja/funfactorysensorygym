@@ -64,7 +64,7 @@ const Gallery = ({ systems, type, short, title, description }) => {
           <p className="font-semibold text-3xl md:text-4xl">{short}</p>
         </div>
         <div className="hidden md:block ml-auto">
-          <Link href={`/gallery?sys=${type}`}>
+          <Link href={`/gallery?sys=${type}#recent`}>
             <a className="text-white px-6 py-3 bg-ffsgPink rounded-xl flex space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold">
               <p>Show All Projects</p>
               <FiArrowUpRight size="1.3em" />
@@ -153,7 +153,7 @@ const Gallery = ({ systems, type, short, title, description }) => {
               </a>
             </Link>
           ))}
-          <Link href={`/gallery?sys=${type}`}>
+          <Link href={`/gallery?sys=${type}#recent`}>
             <a>
               <div className="bg-ffsgPink text-white w-[21.37rem] h-[17rem] md:w-[29.25rem] md:h-[21.5rem] hover:bg-ffsgLightPink hover:text-ffsgPink cursor-pointer transition-colors duration-150  rounded-lg">
                 <p className="flex items-center justify-center h-full w-full font-semibold text-3xl">
@@ -185,7 +185,7 @@ const Gallery = ({ systems, type, short, title, description }) => {
             </p>
           </div>
           <div className="md:hidden mx-auto mt-8">
-            <Link href={`/gallery?sys=${type}`}>
+            <Link href={`/gallery?sys=${type}#recent`}>
               <a className="text-white px-6 py-3 bg-ffsgPink rounded-xl flex space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold text-sm">
                 <p>Show All projects</p>
                 <FiArrowUpRight size="1.3em" />

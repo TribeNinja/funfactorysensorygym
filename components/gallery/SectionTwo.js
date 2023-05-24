@@ -168,7 +168,7 @@ const SectionTwo = ({ pageInfo, tags, categories, commercials, homes }) => {
     <div>
       <div
         className="text-center px-6 md:px-16 mt-12 lg:mt-16 mx-auto"
-        id="recentInstallations"
+        id="recent"
       >
         <h1 className="text-3xl font-bold uppercase">{pageInfo.title}</h1>
 
