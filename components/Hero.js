@@ -20,7 +20,7 @@ const Hero = () => {
   return (
     <div>
       <header className="hidden md:grid grid-cols-2 py-4 px-6 md:px-14 z-10 items-center absolute max-w-7xl w-full font-medium">
-        <div className="flex space-x-8 items-center">
+        <div className="flex space-x-6 items-center">
           <Link href="/">
             <a className="w-20 h-16 md:w-24 md:h-20 lg:w-32 lg:h-28 relative cursor-pointer">
               <Image src="/logo2.png" layout="fill" objectFit="cover" alt="" />
@@ -40,7 +40,7 @@ const Hero = () => {
           </Link>
           <Link href="/blog">
             <a className="relative nav hover:text-ffsgPink cursor-pointer transition-all duration-200">
-              <span className="nav-link">Blog</span>
+              <span className="nav-link">Therapy Talk</span>
             </a>
           </Link>
           <Link href="/giftcards">

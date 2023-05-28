@@ -62,7 +62,7 @@ const Header = ({ StartFromTop }) => {
             </Link>
             <Link href="/blog">
               <a className="relative nav hover:text-ffsgPink cursor-pointer transition-all duration-200">
-                <span className="nav-link">Blog</span>
+                <span className="nav-link">Therapy Talk</span>
               </a>
             </Link>
             <Link href="/giftcards">
@@ -86,7 +86,7 @@ const Header = ({ StartFromTop }) => {
         </div>
       </Fade>
       <div className="flex items-center  max-w-7xl mx-auto py-3 px-6 md:px-12">
-        <div className="flex space-x-8 items-center font-medium">
+        <div className="flex space-x-6 items-center font-medium">
           <Link href="/">
             <a className="w-20 md:w-24 lg:w-28 cursor-pointer">
               <img src="/logo2.png" alt="" />
@@ -132,7 +132,7 @@ const Header = ({ StartFromTop }) => {
                   route.asPath == "/blog" ? "active-link" : "nav-link"
                 }`}
               >
-                Blog
+                Therapy Talk
               </span>
             </a>
           </Link>

@@ -44,7 +44,7 @@ function blog({ blogs }) {
       <div className="mt-48 max-w-5xl mx-auto">
         <div className="mx-6 md:mx-14">
           <div className="text-center my-12 mx-auto">
-            <h1 className="text-3xl font-bold uppercase">Blog</h1>
+            <h1 className="text-3xl font-bold uppercase">Therapy Talk</h1>
           </div>
           <div>
             {blogs.map((blog, i) => (
