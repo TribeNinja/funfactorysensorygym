@@ -45,7 +45,7 @@ const Footer = () => {
               </span>{" "}
               108 Park St, Bear Creek WI 54922
             </p>
-            <p className="mt-4">© 2022 Fun Factory Sensory Gym, LLC</p>
+            <p className="mt-4">© 2023 Fun Factory Sensory Gym, LLC</p>
           </div>
           <div className="mt-8 md:mt-0 space-y-4 text-slate-300 font-light md:ml-auto text-sm">
             <p className="text-ffsgPink font-semibold">Systems</p>
@@ -91,14 +91,6 @@ const Footer = () => {
         </div>
         <div className="flex flex-col md:flex-row mt-8 md:mt-12 justify-between">
           <div className="flex justify-between md:space-x-6 text-3xl">
-            <a
-              href="https://www.facebook.com/FunFactoryGym"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-pointer hover:text-ffsgPink"
-            >
-              <TiSocialFacebook />
-            </a>
             <a
               href="https://www.instagram.com/funfactorysensorygym/"
               target="_blank"
