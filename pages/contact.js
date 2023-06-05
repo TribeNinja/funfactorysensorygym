@@ -2,6 +2,7 @@ import axios from "axios";
 import Footer from "components/Footer";
 import Header from "components/Header";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import { useAlert } from "react-alert";
 
@@ -16,6 +17,8 @@ const Contact = () => {
   const [selectedSystem, setSelectedSystem] = useState(null);
 
   const alert = useAlert();
+
+  const router = useRouter();
 
   const submit = async (e) => {
     e.preventDefault();
@@ -56,9 +59,7 @@ const Contact = () => {
       })
       .then((res) => {
         if (res?.data.status === "success") {
-          alert.success(
-            "Your form was successfully submitted. We will get back to you soon!"
-          );
+          router.push("/thankyou");
         } else {
           alert.error("Something went wrong!");
         }
