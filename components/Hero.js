@@ -52,7 +52,7 @@ const Hero = () => {
         <div className="flex space-x-3">
           <Link href="/contact">
             <a className="hidden md:flex ml-auto items-center text-white px-6 py-3 bg-ffsgPink rounded-xl space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 ring-2 ring-pink-900 font-semibold">
-              <p>Free Consultation</p>
+              <p>Free Quote</p>
               <FiArrowUpRight size="1.2em" />
             </a>
           </Link>

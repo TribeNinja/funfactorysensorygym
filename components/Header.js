@@ -153,8 +153,8 @@ const Header = ({ StartFromTop }) => {
           </Link>
         </div>
         <div className="flex items-center space-x-2 font-semibold ml-auto">
-          <p className="text-[#000054] text-xs md:text-base ml-3 md:ml-6 text-center">
-            Made in USA
+          <p className="text-[#000054] text-xs mx-1 md:mx-0 md:text-base ml-1 md:ml-6 text-center leading-tight">
+            Made in <br className="md:hidden" /> USA
           </p>
           <div className="w-10 ">
             <img src="/usa-flag.gif" alt="" />
@@ -162,13 +162,12 @@ const Header = ({ StartFromTop }) => {
           <div className="md:hidden">
             <Link href="/contact">
               <a className="flex items-center text-white px-3 py-2 bg-ffsgPink rounded-xl space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold text-xs">
-                <p>Free Consultation</p>
-                <FiArrowUpRight size="1em" />
+                <p>Free Quote</p>
               </a>
             </Link>
           </div>
         </div>
-        <div className="md:hidden p-2 ml-3 text-lg border border-ffsgPink text-ffsgPink">
+        <div className="md:hidden p-[6px] ml-2 text-lg rounded-lg border border-ffsgPink text-ffsgPink">
           {menuIsOpen ? (
             <FiMenu onClick={() => setMenuIsOpen(false)} />
           ) : (
@@ -177,7 +176,7 @@ const Header = ({ StartFromTop }) => {
         </div>
         <Link href="/contact">
           <a className="hidden md:flex ml-6 items-center text-white px-4 py-3 lg:px-6 lg:py-3 bg-ffsgPink rounded-xl space-x-1 cursor-pointer hover:bg-ffsgLightPink hover:text-ffsgPink transition-all duration-200 hover:ring-2 hover:ring-ffsgPink font-semibold">
-            <p>Free Consultation</p>
+            <p>Free Quote</p>
             <FiArrowUpRight size="1.3em" />
           </a>
         </Link>
