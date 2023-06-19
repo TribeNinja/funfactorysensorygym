@@ -16,4 +16,18 @@ module.exports = {
   images: {
     domains: ["cdn.sanity.io"],
   },
+  redirects: async () => {
+    return [
+      {
+        source: "/residential-lp",
+        destination: "https://www.funfactorysensorygyms.com/residential-lp/",
+        permanent: false,
+      },
+      {
+        source: "/commercial-lp",
+        destination: "https://www.funfactorysensorygyms.com/commercial-lp/",
+        permanent: false,
+      },
+    ];
+  },
 };
