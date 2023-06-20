@@ -21,12 +21,12 @@ module.exports = {
       {
         source: "/residential-lp",
         destination: "https://www.funfactorysensorygyms.com/residential-lp/",
-        permanent: false,
+        permanent: true,
       },
       {
         source: "/commercial-lp",
         destination: "https://www.funfactorysensorygyms.com/commercial-lp/",
-        permanent: false,
+        permanent: true,
       },
     ];
   },
