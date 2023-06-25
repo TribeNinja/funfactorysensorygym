@@ -82,7 +82,7 @@ const Gallery = ({ systems, type, short, title, description }) => {
             >
               <a>
                 <div className="group md:pr-6 pb-6 cursor-pointer">
-                  <div className="h-52 lg:h-64 bg-ffsgLightPink">
+                  <div className="h-52 lg:h-64 bg-ffsgLightPink rounded-lg">
                     <div>
                       <Slider {...gallerySettings}>
                         {system.gallery.map((image) => (
