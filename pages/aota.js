@@ -118,7 +118,7 @@ const Aota = () => {
               <div className="flex flex-col items-center justify-center mt-10 lg:mt-0">
                 <div className="flex justify-center items-center rounded-full w-[90vw] h-[90vw] lg:w-[25vw] lg:h-[25vw] bg-gradient-to-b from-[#691c6422] to-[#691c64ff]">
                   <div className="flex justify-center items-center rounded-full w-[86vw] h-[86vw] lg:w-[22vw] lg:h-[22vw] bg-[#691C64]">
-                    <div className="rounded-full w-[80vw] h-[80vw] lg:w-[20vw] lg:h-[20vw] bg-[url('/petros.jpg')] bg-no-repeat bg-cover"></div>
+                    <div className="rounded-full w-[80vw] h-[80vw] lg:w-[20vw] lg:h-[20vw] bg-[url('/therapists/petros.jpg')] bg-no-repeat bg-cover"></div>
                   </div>
                 </div>
                 <div className=" flex flex-col items-center justify-center w-[90vw] h-[45vh] lg:w-[40vw] xl:w-[30vw] md:h-[30vh] lg:h-[33vh] mt-[-12vh] bg-white shadow-xl rounded-3xl">

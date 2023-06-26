@@ -7,6 +7,7 @@ import Slider from "react-slick";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import Image from "next/image";
+import Therapist from "components/blog/therapist";
 
 function blog({ blogs }) {
   const settings = {
@@ -43,10 +44,14 @@ function blog({ blogs }) {
       <Header StartFromTop={true} />
       <div className="mt-48 max-w-5xl mx-auto">
         <div className="mx-6 md:mx-14">
-          <div className="text-center my-12 mx-auto">
-            <h1 className="text-3xl font-bold uppercase">Therapy Talk</h1>
-          </div>
-          <div>
+          <Therapist />
+          <div className="py-5 md:py-6 border-b border-gray-200" />
+          {/* <div className="text-center mt-14 mb-8 mx-auto">
+            <h1 className="text-3xl font-bold uppercase text-[#295431]">
+              Blog
+            </h1>
+          </div> */}
+          <div className="mt-10 md:mt-4">
             {blogs.map((blog, i) => (
               <div key={blog._id}>
                 <div className="flex items-center md:space-x-14">
