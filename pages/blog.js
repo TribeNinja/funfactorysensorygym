@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import Image from "next/image";
-import Therapist from "components/blog/therapist";
+import Therapist from "components/blog/Therapist";
 
 function blog({ blogs }) {
   const settings = {
