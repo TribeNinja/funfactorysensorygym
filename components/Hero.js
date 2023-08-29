@@ -40,7 +40,7 @@ const Hero = () => {
           </Link>
           <Link href="/blog">
             <a className="relative nav hover:text-ffsgPink cursor-pointer transition-all duration-200">
-              <span className="nav-link">Therapy Talk</span>
+              <span className="nav-link">Fun Factory</span>
             </a>
           </Link>
           <Link href="/giftcards">
@@ -71,27 +71,21 @@ const Hero = () => {
               One Gym, Unlimited Possibilities
             </h1>
             <p className="leading-relaxed">
-              At Fun Factory Sensory Gym, we design, manufacture, and
-              custom-install sensory gyms throughout the United States. From
-              learning about your space, the design of your sensory gym, and the
-              3-D rendering of your space, where you can see what your gym would
-              look like at your provided location, to the installation of our
-              custom products, our design specialists will create the most
-              effective and efficient sensory gym for all your needs. At Fun
-              Factory Sensory Gym, our mission is to impact the lives of
-              children through developmental and therapeutic sensory play. If
-              you are a parent, therapist, or organization looking for a fun,
-              healthy way for your children to learn, develop, and grow; book a
-              free consultation with our design team today to learn more about
-              Fun Factory and your dream sensory gym.
+              At Fun Factory Sensory Gym, we design, manufacture, and custom-install sensory gyms throughout the United
+              States. From learning about your space, the design of your sensory gym, and the 3-D rendering of your
+              space, where you can see what your gym would look like at your provided location, to the installation of
+              our custom products, our design specialists will create the most effective and efficient sensory gym for
+              all your needs. At Fun Factory Sensory Gym, our mission is to impact the lives of children through
+              developmental and therapeutic sensory play. If you are a parent, therapist, or organization looking for a
+              fun, healthy way for your children to learn, develop, and grow; book a free consultation with our design
+              team today to learn more about Fun Factory and your dream sensory gym.
             </p>
             <div className="flex items-center space-x-3">
               <div className="text-white p-3 bg-ffsgPink inline-block rounded-full">
                 <TiTickOutline className="text-2xl" />
               </div>
               <p className="font-medium leading-relaxed flex">
-                A percentage of every installation is given back to families
-                with special needs.
+                A percentage of every installation is given back to families with special needs.
               </p>
             </div>
           </div>
@@ -113,31 +107,13 @@ const Hero = () => {
         </div>
         <div className="relative">
           <Slider {...settings}>
-            <video
-              className="h-[35rem] md:h-[96vh] w-full object-cover"
-              autoPlay
-              playsInline
-              loop
-              muted
-            >
+            <video className="h-[35rem] md:h-[96vh] w-full object-cover" autoPlay playsInline loop muted>
               <source src="/videos/sample3.mp4" type="video/mp4" />
             </video>
-            <video
-              className="h-[35rem] md:h-[96vh] w-full object-cover"
-              autoPlay
-              playsInline
-              loop
-              muted
-            >
+            <video className="h-[35rem] md:h-[96vh] w-full object-cover" autoPlay playsInline loop muted>
               <source src="/videos/sample2.mp4" type="video/mp4" />
             </video>
-            <video
-              className="h-[35rem] md:h-[96vh] w-full object-cover"
-              autoPlay
-              playsInline
-              loop
-              muted
-            >
+            <video className="h-[35rem] md:h-[96vh] w-full object-cover" autoPlay playsInline loop muted>
               <source src="/videos/sample.mp4" type="video/mp4" />
             </video>
             {/* <img
@@ -153,14 +129,7 @@ const Hero = () => {
                 <div>
                   <div className="font-bold text-2xl">
                     <VisibilitySensor partialVisibility>
-                      {({ isVisible }) => (
-                        <p>
-                          {isVisible ? (
-                            <CountUp start={1} end={550000} duration={3} />
-                          ) : null}
-                          +
-                        </p>
-                      )}
+                      {({ isVisible }) => <p>{isVisible ? <CountUp start={1} end={550000} duration={3} /> : null}+</p>}
                     </VisibilitySensor>
                   </div>
                   <p className="text-sm">Children Helped</p>
@@ -170,14 +139,7 @@ const Hero = () => {
                 <div>
                   <div className="font-bold text-2xl">
                     <VisibilitySensor partialVisibility>
-                      {({ isVisible }) => (
-                        <p>
-                          {isVisible ? (
-                            <CountUp start={1} end={4400} duration={3} />
-                          ) : null}
-                          +
-                        </p>
-                      )}
+                      {({ isVisible }) => <p>{isVisible ? <CountUp start={1} end={4400} duration={3} /> : null}+</p>}
                     </VisibilitySensor>
                   </div>
                   <p className="text-sm">Installations Completed</p>

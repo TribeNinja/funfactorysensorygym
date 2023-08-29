@@ -38,16 +38,12 @@ const Header = ({ StartFromTop }) => {
       <div className="flex items-center justify-center p-2 px-3 md:p-3 bg-[#0db14b] text-white">
         <RiChatHeartFill className="text-3xl md:text-2xl mr-2 animate-pulse" />
         <p className="text-xs md:text-base">
-          Proceeds from each purchase of a Fun Factory Sensory Gym installation
-          help families with special needs children.
+          Proceeds from each purchase of a Fun Factory Sensory Gym installation help families with special needs
+          children.
         </p>
       </div>
       <Fade left={true} duration={500} opposite when={menuIsOpen}>
-        <div
-          className={`${
-            menuIsOpen ? "block" : "hidden"
-          } absolute top-full h-screen w-screen bg-white z-50`}
-        >
+        <div className={`${menuIsOpen ? "block" : "hidden"} absolute top-full h-screen w-screen bg-white z-50`}>
           <div className="flex flex-col items-center mt-20 space-y-9">
             <Link href="/#about">
               <a className="relative nav hover:text-ffsgPink cursor-pointer transition-all duration-200">
@@ -62,7 +58,7 @@ const Header = ({ StartFromTop }) => {
             </Link>
             <Link href="/blog">
               <a className="relative nav hover:text-ffsgPink cursor-pointer transition-all duration-200">
-                <span className="nav-link">Therapy Talk</span>
+                <span className="nav-link">Fun Factory</span>
               </a>
             </Link>
             <Link href="/giftcards">
@@ -89,7 +85,7 @@ const Header = ({ StartFromTop }) => {
         <div className="flex space-x-6 items-center font-medium">
           <Link href="/">
             <a className="w-20 md:w-24 lg:w-28 cursor-pointer">
-              <img src="/logo2.png" alt="" />
+              <img src="/TTLogo.png" alt="" />
             </a>
           </Link>
           <Link href="/#about">
@@ -127,13 +123,7 @@ const Header = ({ StartFromTop }) => {
                 route.asPath == "/blog" ? "text-ffsgPink" : "text-black"
               } relative nav hidden md:block hover:text-ffsgPink cursor-pointer transition-all duration-200`}
             >
-              <span
-                className={`${
-                  route.asPath == "/blog" ? "active-link" : "nav-link"
-                }`}
-              >
-                Therapy Talk
-              </span>
+              <span className={`${route.asPath == "/blog" ? "active-link" : "nav-link"}`}>Fun Factory</span>
             </a>
           </Link>
           <Link href="/giftcards">
@@ -142,13 +132,7 @@ const Header = ({ StartFromTop }) => {
                 route.asPath == "/giftcards" ? "text-ffsgPink" : "text-black"
               } relative nav hidden md:block hover:text-ffsgPink cursor-pointer transition-all duration-200`}
             >
-              <span
-                className={`${
-                  route.asPath == "/giftcards" ? "active-link" : "nav-link"
-                }`}
-              >
-                Gift Cards
-              </span>
+              <span className={`${route.asPath == "/giftcards" ? "active-link" : "nav-link"}`}>Gift Cards</span>
             </a>
           </Link>
         </div>
