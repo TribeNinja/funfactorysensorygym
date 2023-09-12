@@ -100,7 +100,7 @@ function blog({ blogs }) {
                         dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
                         projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
                         blocks={removeImagesFromArray(blog.body)}
-                        className="md:text-lg leading-relaxed"
+                        className="hidden lg:block md:text-lg leading-relaxed"
                       />
                     </div>
                     <div className="md:hidden ">
